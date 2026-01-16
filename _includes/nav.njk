@@ -1,0 +1,18 @@
+<!-- Navigation -->
+<nav class="nav" id="nav">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <img src="{{ site.logo.header }}" alt="WealthBridge" class="nav__logo-img" data-cms-bind="#site.logo.header">
+      </a>
+      <ul class="nav__links">
+        {% for link in navigation.links %}
+        <li><a href="{{ link.url }}" class="nav__link">{{ link.text }}</a></li>
+        {% endfor %}
+      </ul>
+      <div class="nav__actions">
+        <a href="{{ navigation.cta.url }}" class="btn btn--outline nav__cta" data-cms-bind="#navigation.cta.text">{{ navigation.cta.text }}</a>
+      </div>
+    </div>
+  </div>
+</nav>

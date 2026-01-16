@@ -1,0 +1,12 @@
+{
+  "name": "wealthbridge-cloudcannon",
+  "version": "1.0.0",
+  "description": "WealthBridge Consulting - CloudCannon site with Eleventy",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

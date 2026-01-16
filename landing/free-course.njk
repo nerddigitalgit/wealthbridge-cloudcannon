@@ -1,0 +1,212 @@
+---
+layout: base.njk
+title: Free 5-Day Keep Rate Course | WealthBridge Consulting
+description: Learn the exact strategies the ultra-wealthy use to keep more of every dollar they earn. Free 5-day email course for Canadian business owners.
+---
+
+<!-- Hero Section -->
+<section class="hero section--cream" id="signup">
+  <div class="container">
+    <div class="hero__grid">
+      <div class="hero__content">
+        <div class="hero__badge animate" data-cms-bind="#free_course.hero.badge">{{ free_course.hero.badge }}</div>
+        <h1 class="hero__title animate animate-delay-1" data-cms-bind="#free_course.hero.title">{{ free_course.hero.title | replace("Blueprint", "<br><span>Blueprint</span>") | safe }}</h1>
+        <p class="hero__subtitle animate animate-delay-2" data-cms-bind="#free_course.hero.subtitle">{{ free_course.hero.subtitle }}</p>
+
+        <div class="hero__benefits animate animate-delay-3">
+          {% for benefit in free_course.hero.benefits %}
+          <div class="hero__benefit">
+            <span class="hero__benefit-icon">
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </span>
+            <span data-cms-bind="#free_course.hero.benefits[{{ loop.index0 }}].text">{{ benefit.text }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Form Card with Book Cover -->
+      <div class="form-card animate animate-delay-2">
+        <div class="book-cover__image">
+          <img src="{{ free_course.book_image }}" alt="The Keep Rate Blueprint" data-cms-bind="#free_course.book_image">
+        </div>
+
+        <div class="form-card__header">
+          <h2 class="form-card__title" data-cms-bind="#free_course.form.title">{{ free_course.form.title }}</h2>
+          <p class="form-card__subtitle" data-cms-bind="#free_course.form.subtitle">{{ free_course.form.subtitle }}</p>
+        </div>
+        <form id="course-form" action="{{ free_course.form.webhook_url }}" method="POST" data-redirect="{{ free_course.form.redirect_url }}">
+          <div class="form-group">
+            <label class="form-label" for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Enter your first name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email address" required>
+          </div>
+          <button type="submit" class="btn btn--primary btn--large btn--full" data-cms-bind="#free_course.form.button">{{ free_course.form.button }}</button>
+          <p class="form-note" data-cms-bind="#free_course.form.note">{{ free_course.form.note }}</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Course Curriculum -->
+<section class="curriculum section section--white">
+  <div class="container">
+    <div class="curriculum__header">
+      <p class="eyebrow" data-cms-bind="#free_course.curriculum.eyebrow">{{ free_course.curriculum.eyebrow }}</p>
+      <h2 data-cms-bind="#free_course.curriculum.title">{{ free_course.curriculum.title }}</h2>
+    </div>
+    <div class="curriculum__list">
+      {% for day in free_course.curriculum.days %}
+      <div class="curriculum__item">
+        <div class="curriculum__day">
+          <span class="curriculum__day-badge">{{ loop.index }}</span>
+          <span class="curriculum__day-label">Day {{ ["One", "Two", "Three", "Four", "Five"][loop.index0] }}</span>
+        </div>
+        <div class="curriculum__content">
+          <h3 class="curriculum__title" data-cms-bind="#free_course.curriculum.days[{{ loop.index0 }}].title">{{ day.title }}</h3>
+          <p class="curriculum__text" data-cms-bind="#free_course.curriculum.days[{{ loop.index0 }}].text">{{ day.text }}</p>
+          <div class="curriculum__takeaway">
+            <span class="curriculum__takeaway-icon">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/></svg>
+            </span>
+            <span><strong>Takeaway:</strong> <span data-cms-bind="#free_course.curriculum.days[{{ loop.index0 }}].takeaway">{{ day.takeaway }}</span></span>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Founder Section -->
+<section class="founder-bio section section--white">
+  <div class="container">
+    <div class="founder-bio__header">
+      <p class="eyebrow" data-cms-bind="#free_course.founder.eyebrow">{{ free_course.founder.eyebrow }}</p>
+      <h2 data-cms-bind="#free_course.founder.title">{{ free_course.founder.title }}</h2>
+    </div>
+    <div class="founder-bio__grid">
+      <div class="founder-bio__photo">
+        <img src="{{ free_course.founder.photo }}" alt="{{ free_course.founder.name }}" data-cms-bind="#free_course.founder.photo">
+      </div>
+      <div class="founder-bio__content">
+        <h3 class="founder-bio__name" data-cms-bind="#free_course.founder.name">{{ free_course.founder.name }}</h3>
+        <p class="founder-bio__credentials" data-cms-bind="#free_course.founder.credentials">{{ free_course.founder.credentials }}</p>
+        <div class="founder-bio__text" data-cms-bind="#free_course.founder.bio">{{ free_course.founder.bio | safe }}</div>
+        <div class="founder-bio__stats">
+          {% for stat in free_course.founder.stats %}
+          <div class="founder-bio__stat">
+            <span class="founder-bio__stat-value" data-cms-bind="#free_course.founder.stats[{{ loop.index0 }}].value">{{ stat.value }}</span>
+            <span class="founder-bio__stat-label" data-cms-bind="#free_course.founder.stats[{{ loop.index0 }}].label">{{ stat.label }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Audience Section -->
+<section class="audience section section--brown">
+  <div class="container">
+    <div class="audience__header">
+      <p class="eyebrow" data-cms-bind="#free_course.audience.eyebrow">{{ free_course.audience.eyebrow }}</p>
+      <h2 data-cms-bind="#free_course.audience.title">{{ free_course.audience.title }}</h2>
+    </div>
+    <div class="audience__grid audience__grid--cards">
+      {% for card in free_course.audience.cards %}
+      <div class="audience__card">
+        <div class="audience__card-icon">
+          {% if loop.index == 1 %}
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          {% elif loop.index == 2 %}
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          {% else %}
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+          {% endif %}
+        </div>
+        <h3 class="audience__card-title" data-cms-bind="#free_course.audience.cards[{{ loop.index0 }}].title">{{ card.title }}</h3>
+        <p class="audience__card-text" data-cms-bind="#free_course.audience.cards[{{ loop.index0 }}].text">{{ card.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="audience__cta">
+      <a href="#signup" class="btn btn--white btn--large">Get the Free Course</a>
+    </div>
+  </div>
+</section>
+
+<!-- Social Proof -->
+<section class="proof section section--cream">
+  <div class="container">
+    <div class="proof__header">
+      <p class="eyebrow" data-cms-bind="#free_course.proof.eyebrow">{{ free_course.proof.eyebrow }}</p>
+      <h2 data-cms-bind="#free_course.proof.title">{{ free_course.proof.title }}</h2>
+    </div>
+    <div class="proof__grid">
+      {% for testimonial in free_course.proof.testimonials %}
+      <div class="proof__card">
+        <p class="proof__quote" data-cms-bind="#free_course.proof.testimonials[{{ loop.index0 }}].quote">"{{ testimonial.quote }}"</p>
+        <div class="proof__author">
+          <div class="proof__avatar">
+            <img src="{{ testimonial.avatar }}" alt="{{ testimonial.name }}" data-cms-bind="#free_course.proof.testimonials[{{ loop.index0 }}].avatar">
+          </div>
+          <div>
+            <p class="proof__name" data-cms-bind="#free_course.proof.testimonials[{{ loop.index0 }}].name">{{ testimonial.name }}</p>
+            <p class="proof__role" data-cms-bind="#free_course.proof.testimonials[{{ loop.index0 }}].role">{{ testimonial.role }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta section section--sage">
+  <div class="container">
+    <div class="cta__inner">
+      <p class="eyebrow" data-cms-bind="#free_course.cta.eyebrow">{{ free_course.cta.eyebrow }}</p>
+      <h2 class="cta__title" data-cms-bind="#free_course.cta.title">{{ free_course.cta.title }}</h2>
+      <p class="subtitle cta__subtitle" data-cms-bind="#free_course.cta.subtitle">{{ free_course.cta.subtitle }}</p>
+      <a href="#signup" class="btn btn--primary btn--large" data-cms-bind="#free_course.cta.button">{{ free_course.cta.button }}</a>
+    </div>
+  </div>
+</section>
+
+<script>
+// Form submission with webhook
+document.getElementById('course-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const form = this;
+  const formData = new FormData(form);
+  const redirectUrl = form.dataset.redirect;
+
+  // Submit to webhook (update action URL in CloudCannon)
+  if (form.action && form.action !== '#' && form.action !== '') {
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      mode: 'no-cors'
+    }).then(function() {
+      if (redirectUrl) {
+        window.location.href = redirectUrl;
+      }
+    }).catch(function(error) {
+      console.error('Error:', error);
+      if (redirectUrl) {
+        window.location.href = redirectUrl;
+      }
+    });
+  } else {
+    // Demo mode - just redirect
+    if (redirectUrl) {
+      window.location.href = redirectUrl;
+    }
+  }
+});
+</script>

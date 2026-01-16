@@ -5,16 +5,13 @@
     "title_highlight": "keep",
     "title_end": "more.",
     "subtitle": "Your Keep Rate is the share of every dollar you actually keep after tax, fees, and leakage. Most Canadian owners overwork with a low Keep Rate and wonder why freedom never arrives. We raise your Keep Rate by restructuring tax, reallocating retained earnings, cutting cost drag, and fixing withdrawal policy.",
-    "cta_primary": {
-      "text": "Get Your Free Keep Rate Audit",
-      "url": "https://calendly.com/wealthbridgeto/30min?month=2026-01"
-    }
+    "cta_primary": "Get Your Free Keep Rate Audit"
   },
   "problem": {
     "eyebrow": "The Problem",
     "title": "You have a low Keep Rate.",
     "definition": {
-      "term": "Keep Rate:",
+      "term": "Keep Rate",
       "text": "The percentage of your income you actually keep after taxes, interest, and wealth drains. It's the single number that determines whether you build generational wealth - or work your whole life with little to show for it."
     },
     "comparison": {
@@ -43,7 +40,7 @@
   },
   "founder": {
     "greeting": "Hi there,",
-    "paragraphs": [
+    "story": [
       "I left my job as an Ontario Treasury Board Analyst to build something of my own. My first year in business, I earned just over $200,000. It felt like success, until tax season, when a huge portion disappeared.",
       "My business counterpart, same market, earned seven figures and kept most of it. The difference wasn't effort. It was structure.",
       "I was too \"small\" for private wealth firms. Too complex for bank advice. No one explained how tax, incorporation, and planning work together. So, I learned the hard way, and made expensive mistakes along the way.",
@@ -56,11 +53,9 @@
       "We offer a complimentary Keep Rate Audit to show you where wealth may be quietly leaking. No pressure. Just clarity.",
       "Your success isn't a transaction. It's a transformation."
     ],
-    "signature": {
-      "name": "Behi Shafiei",
-      "title": "Founder & CEO, WealthBridge Consulting",
-      "photo": "https://cdn.builder.io/api/v1/image/assets%2F44e3e188e75945c7957b904ccda3f1ae%2Fc1b2746894e54131b1ae91e0d6c8a0f0"
-    }
+    "name": "Behi Shafiei",
+    "title": "Founder & CEO, WealthBridge Consulting",
+    "photo": "https://cdn.builder.io/api/v1/image/assets%2F44e3e188e75945c7957b904ccda3f1ae%2Fc1b2746894e54131b1ae91e0d6c8a0f0"
   },
   "process": {
     "eyebrow": "What You Get With WealthBridge",
@@ -86,36 +81,26 @@
       }
     ],
     "cta_text": "Want to learn more?",
-    "cta_primary": {
-      "text": "Get Your Free Keep Rate Audit",
-      "url": "https://calendly.com/wealthbridgeto/30min?month=2026-01"
-    },
-    "cta_secondary": {
-      "text": "Or learn how to keep more wealth",
-      "url": "#"
-    }
+    "cta_primary": "Get Your Free Keep Rate Audit",
+    "cta_secondary": "Or learn how to keep more wealth &rarr;"
   },
   "interested": {
     "title": "Let's Talk",
     "box_title": "This is for you if...",
     "items": [
-      "You believe (like us) that <strong>business owners are the foundation of Canada's economy</strong>",
-      "You believe the ultra-wealthy <strong>shouldn't be the only ones who get to build generational wealth</strong>",
-      "You're a Canadian business owner with an <strong>incorporated business</strong>",
-      "You make <strong>more than you need to live on</strong> and have retained earnings sitting in your corporation",
-      "You're ready to <strong>stop accepting \"that's just how taxes work\"</strong> as an answer"
+      { "text": "You believe (like us) that <strong>business owners are the foundation of Canada's economy</strong>" },
+      { "text": "You believe the ultra-wealthy <strong>shouldn't be the only ones who get to build generational wealth</strong>" },
+      { "text": "You're a Canadian business owner with an <strong>incorporated business</strong>" },
+      { "text": "You make <strong>more than you need to live on</strong> and have retained earnings sitting in your corporation" },
+      { "text": "You're ready to <strong>stop accepting \"that's just how taxes work\"</strong> as an answer" }
     ],
-    "cta": {
-      "text": "Get Your Free Keep Rate Audit",
-      "url": "https://calendly.com/wealthbridgeto/30min?month=2026-01"
-    }
+    "cta": "Get Your Free Keep Rate Audit"
   },
   "cta": {
     "eyebrow": "Take the First Step",
     "title": "What's your Keep Rate?",
     "subtitle": "Find out how much money you're losing every year - and get a free plan to keep more of it.",
     "button_text": "Get Your Free Keep Rate Audit",
-    "button_url": "https://calendly.com/wealthbridgeto/30min?month=2026-01",
     "note": "Takes 30 minutes. No obligation. If we can't help, we'll tell you."
   },
   "modal": {

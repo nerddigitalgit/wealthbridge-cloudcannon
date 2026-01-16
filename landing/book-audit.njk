@@ -1,0 +1,171 @@
+---
+layout: base.njk
+title: Free Keep Rate Audit | WealthBridge Consulting
+description: Book your free 30-minute Keep Rate Audit. Discover where your wealth is quietly leaking and get a personalized plan to keep more of what you earn.
+---
+
+<!-- Hero Section -->
+<section class="hero section--cream">
+  <div class="container">
+    <div class="hero__grid">
+      <div class="hero__content">
+        <div class="hero__badge animate" data-cms-bind="#book_audit.hero.badge">{{ book_audit.hero.badge }}</div>
+        <h1 class="hero__title animate animate-delay-1" data-cms-bind="#book_audit.hero.title">{{ book_audit.hero.title | replace("Keep Rate", "<br><span>Keep Rate</span>") | safe }}</h1>
+        <p class="hero__subtitle animate animate-delay-2" data-cms-bind="#book_audit.hero.subtitle">{{ book_audit.hero.subtitle }}</p>
+
+        <div class="hero__features animate animate-delay-3">
+          {% for feature in book_audit.hero.features %}
+          <div class="hero__feature">
+            <span class="hero__feature-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </span>
+            <span><strong data-cms-bind="#book_audit.hero.features[{{ loop.index0 }}].bold_text">{{ feature.bold_text }}</strong> - <span data-cms-bind="#book_audit.hero.features[{{ loop.index0 }}].description">{{ feature.description }}</span></span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Booking Embed -->
+      <div class="booking-embed animate animate-delay-2">
+        <div class="booking-embed__header">
+          <h2 class="booking-embed__title" data-cms-bind="#book_audit.booking.title">{{ book_audit.booking.title }}</h2>
+          <p class="booking-embed__subtitle" data-cms-bind="#book_audit.booking.subtitle">{{ book_audit.booking.subtitle }}</p>
+        </div>
+
+        {% if book_audit.booking.embed_code %}
+        <div class="booking-embed__calendly" data-cms-bind="#book_audit.booking.embed_code">
+          {{ book_audit.booking.embed_code | safe }}
+        </div>
+        {% else %}
+        <div class="booking-embed__placeholder">
+          <p class="booking-embed__placeholder-text">Calendly or booking widget goes here</p>
+          <p style="font-size: 12px; color: var(--muted); margin-top: 12px;">Add your Calendly embed code in CloudCannon</p>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits section section--white">
+  <div class="container">
+    <div class="benefits__header">
+      <p class="eyebrow" data-cms-bind="#book_audit.benefits.eyebrow">{{ book_audit.benefits.eyebrow }}</p>
+      <h2 data-cms-bind="#book_audit.benefits.title">{{ book_audit.benefits.title }}</h2>
+    </div>
+    <div class="benefits__grid">
+      {% for card in book_audit.benefits.cards %}
+      <div class="benefits__card">
+        <div class="benefits__card-icon">
+          {% if loop.index == 1 %}
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
+          {% elif loop.index == 2 %}
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          {% else %}
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          {% endif %}
+        </div>
+        <h3 class="benefits__card-title" data-cms-bind="#book_audit.benefits.cards[{{ loop.index0 }}].title">{{ card.title }}</h3>
+        <p class="benefits__card-text" data-cms-bind="#book_audit.benefits.cards[{{ loop.index0 }}].text">{{ card.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials section section--sage">
+  <div class="container">
+    <div class="testimonials__header">
+      <p class="eyebrow" data-cms-bind="#book_audit.testimonials.eyebrow">{{ book_audit.testimonials.eyebrow }}</p>
+      <h2 data-cms-bind="#book_audit.testimonials.title">{{ book_audit.testimonials.title }}</h2>
+    </div>
+    <div class="testimonials__grid">
+      {% for item in book_audit.testimonials.items %}
+      <div class="testimonial">
+        <span class="testimonial__result" data-cms-bind="#book_audit.testimonials.items[{{ loop.index0 }}].result">{{ item.result }}</span>
+        <p class="testimonial__quote" data-cms-bind="#book_audit.testimonials.items[{{ loop.index0 }}].quote">"{{ item.quote }}"</p>
+        <div class="testimonial__author">
+          <div class="testimonial__avatar">
+            <img src="{{ item.avatar }}" alt="{{ item.name }}" data-cms-bind="#book_audit.testimonials.items[{{ loop.index0 }}].avatar">
+          </div>
+          <div class="testimonial__info">
+            <p class="testimonial__name" data-cms-bind="#book_audit.testimonials.items[{{ loop.index0 }}].name">{{ item.name }}</p>
+            <p class="testimonial__role" data-cms-bind="#book_audit.testimonials.items[{{ loop.index0 }}].role">{{ item.role }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Audience Section -->
+<section class="audience section section--cream">
+  <div class="container">
+    <div class="audience__header">
+      <p class="eyebrow" data-cms-bind="#book_audit.audience.eyebrow">{{ book_audit.audience.eyebrow }}</p>
+      <h2 data-cms-bind="#book_audit.audience.title">{{ book_audit.audience.title }}</h2>
+    </div>
+    <div class="audience__box">
+      <h3 class="audience__box-title" data-cms-bind="#book_audit.audience.box_title">{{ book_audit.audience.box_title }}</h3>
+      <div class="audience__grid">
+        {% for item in book_audit.audience.items %}
+        <div class="audience__item">
+          <span class="audience__item-icon">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <span data-cms-bind="#book_audit.audience.items[{{ loop.index0 }}].text">{{ item.text | safe }}</span>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="audience__cta">
+        <a href="#" class="btn btn--primary btn--large" onclick="document.querySelector('.hero').scrollIntoView({behavior: 'smooth'}); return false;">Book Your Free Audit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process Section -->
+<section class="process section section--brown">
+  <div class="container">
+    <div class="process__header">
+      <p class="eyebrow" data-cms-bind="#book_audit.process.eyebrow">{{ book_audit.process.eyebrow }}</p>
+      <h2 data-cms-bind="#book_audit.process.title">{{ book_audit.process.title }}</h2>
+    </div>
+    <div class="process__steps">
+      {% for step in book_audit.process.steps %}
+      <div class="process__step">
+        <div class="process__step-icon">
+          {% if loop.index == 1 %}
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          {% elif loop.index == 2 %}
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          {% else %}
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          {% endif %}
+        </div>
+        <h3 class="process__step-title" data-cms-bind="#book_audit.process.steps[{{ loop.index0 }}].title">{{ loop.index }}. {{ step.title }}</h3>
+        <p class="process__step-text" data-cms-bind="#book_audit.process.steps[{{ loop.index0 }}].text">{{ step.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="process__cta">
+      <a href="#" class="btn btn--white btn--large" onclick="document.querySelector('.hero').scrollIntoView({behavior: 'smooth'}); return false;">Book Your Free Audit Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta section section--cream">
+  <div class="container">
+    <div class="cta__inner">
+      <p class="eyebrow" data-cms-bind="#book_audit.cta.eyebrow">{{ book_audit.cta.eyebrow }}</p>
+      <h2 class="cta__title" data-cms-bind="#book_audit.cta.title">{{ book_audit.cta.title }}</h2>
+      <p class="subtitle cta__subtitle" data-cms-bind="#book_audit.cta.subtitle">{{ book_audit.cta.subtitle }}</p>
+      <a href="#" class="btn btn--primary btn--large" onclick="document.querySelector('.hero').scrollIntoView({behavior: 'smooth'}); return false;" data-cms-bind="#book_audit.cta.button">{{ book_audit.cta.button }}</a>
+      <p class="cta__note" data-cms-bind="#book_audit.cta.note">{{ book_audit.cta.note }}</p>
+    </div>
+  </div>
+</section>

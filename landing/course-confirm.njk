@@ -1,0 +1,40 @@
+---
+layout: base.njk
+title: You're In! | WealthBridge Consulting
+description: Thank you for signing up for the free Keep Rate course. Check your email for your first lesson.
+---
+
+<!-- Confirmation Section -->
+<section class="confirmation section--cream">
+  <div class="container">
+    <div class="confirmation__card animate">
+      <div class="confirmation__icon">
+        <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <h1 class="confirmation__title" data-cms-bind="#course_confirm.title">{{ course_confirm.title }}</h1>
+
+      <p class="confirmation__text" data-cms-bind="#course_confirm.subtitle">{{ course_confirm.subtitle }}</p>
+
+      <div class="confirmation__steps">
+        <p class="confirmation__steps-title">What happens next:</p>
+        <div class="confirmation__steps-list">
+          {% for step in course_confirm.steps %}
+          <div class="confirmation__step">
+            <span class="confirmation__step-number">{{ loop.index }}</span>
+            <span data-cms-bind="#course_confirm.steps[{{ loop.index0 }}].text">{{ step.text | safe }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div style="margin-top: 32px;">
+        <p style="font-size: 16px; color: var(--slate); margin-bottom: 16px;" data-cms-bind="#course_confirm.cta_text">{{ course_confirm.cta_text }}</p>
+        <a href="/landing/book-audit/" class="btn btn--primary btn--large" data-cms-bind="#course_confirm.cta_button">{{ course_confirm.cta_button }}</a>
+        <p style="font-size: 14px; color: var(--muted); margin-top: 16px;">30 minutes. No obligation. Personalized insights.</p>
+      </div>
+    </div>
+  </div>
+</section>

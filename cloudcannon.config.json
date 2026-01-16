@@ -2,6 +2,10 @@
   "source": "",
   "timezone": "America/Toronto",
   "base_url": "/",
+  "_generator": {
+    "name": "eleventy",
+    "version": "2.0"
+  },
   "paths": {
     "data": "_data",
     "layouts": "_layouts",

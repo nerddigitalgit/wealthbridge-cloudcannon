@@ -1,0 +1,43 @@
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="{{ site.logo.footer }}" alt="WealthBridge" class="footer__logo-img" data-cms-bind="#site.logo.footer">
+        </div>
+        <p class="footer__tagline" data-cms-bind="#footer.tagline">{{ footer.tagline }}</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#founder">About Behi</a></li>
+            <li><a href="#solution">Our Approach</a></li>
+            <li><a href="#results">Client Results</a></li>
+            <li><a href="{{ site.calendly_url }}">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#problem">Keep Rate</a></li>
+            <li><a href="#process">How It Works</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="{{ site.calendly_url }}">Book a Call</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; 2025 WealthBridge Consulting. All rights reserved.</p>
+      <div class="footer__legal">
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer__disclaimer" data-cms-bind="#site.disclaimer">
+      <strong>Disclaimer:</strong> {{ site.disclaimer }}
+    </div>
+  </div>
+</footer>

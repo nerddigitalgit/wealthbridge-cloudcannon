@@ -1,24 +1,24 @@
 {
   "links": [
     {
-      "label": "Our Approach",
+      "text": "Our Approach",
       "url": "#solution"
     },
     {
-      "label": "Results",
+      "text": "Results",
       "url": "#results"
     },
     {
-      "label": "How It Works",
+      "text": "How It Works",
       "url": "#process"
     },
     {
-      "label": "FAQ",
+      "text": "FAQ",
       "url": "#faq"
     }
   ],
   "cta": {
-    "label": "Keep More Wealth",
+    "text": "Keep More Wealth",
     "url": "https://calendly.com/wealthbridgeto/30min?month=2026-01"
   }
 }
