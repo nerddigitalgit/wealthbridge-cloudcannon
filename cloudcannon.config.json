@@ -1,10 +1,17 @@
 {
   "source": "",
+  "output": "_site",
   "timezone": "America/Toronto",
   "base_url": "/",
   "_generator": {
     "name": "eleventy",
-    "version": "2.0"
+    "version": "2.0",
+    "metadata": {
+      "markdown": "markdown-it",
+      "markdown_options": {
+        "html": true
+      }
+    }
   },
   "paths": {
     "data": "_data",
