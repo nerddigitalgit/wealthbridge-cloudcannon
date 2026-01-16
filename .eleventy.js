@@ -5,11 +5,6 @@ module.exports = function(eleventyConfig) {
   // Watch for changes in assets
   eleventyConfig.addWatchTarget("assets/");
 
-  // Add a filter to handle markdown in JSON (for bio fields etc)
-  eleventyConfig.addFilter("safe", function(content) {
-    return content;
-  });
-
   return {
     dir: {
       input: ".",
