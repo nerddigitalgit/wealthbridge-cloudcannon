@@ -2,12 +2,32 @@
 layout: base.njk
 title: WealthBridge Consulting | Raise Your Keep Rate
 hero_eyebrow: For Canadian Business Owners
+hero_eyebrow_color: gold
 hero_title: "The wealthy don't just earn more. They"
+hero_title_color: navy
 hero_title_highlight: keep
+hero_title_highlight_color: gold
 hero_title_end: more.
 hero_subtitle: "Your Keep Rate is the share of every dollar you actually keep after tax, fees, and leakage. Most Canadian owners overwork with a low Keep Rate and wonder why freedom never arrives. We raise your Keep Rate by restructuring tax, reallocating retained earnings, cutting cost drag, and fixing withdrawal policy."
+hero_subtitle_color: slate
 hero_cta_primary: Get Your Free Keep Rate Audit
+quickproof_eyebrow: Client Results
+quickproof_title: Real Results from Real Clients
+quickproof_items:
+  - headline: "$127K saved annually"
+    meta: "Tech Consultant, Toronto"
+    text: "Restructured my corporation and investment strategy. Now keeping significantly more of every dollar I earn."
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face"
+  - headline: "48% to 12% tax rate"
+    meta: "Real Estate Investor, Vancouver"
+    text: "Went from paying nearly half my income in taxes to keeping almost 90%. The difference is life-changing."
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face"
+  - headline: "$2.1M lifetime projection"
+    meta: "Medical Professional, Calgary"
+    text: "The wealth plan they created projects $2.1M more in retirement savings compared to my previous approach."
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
 problem_eyebrow: The Problem
+problem_title_color: white
 problem_title: You have a low Keep Rate.
 problem_definition_term: Keep Rate
 problem_definition_text: "The percentage of your income you actually keep after taxes, interest, and wealth drains. It's the single number that determines whether you build generational wealth - or work your whole life with little to show for it."
@@ -43,7 +63,9 @@ founder_name: Behi Shafiei
 founder_title: "Founder & CEO, WealthBridge Consulting"
 founder_photo: "https://cdn.builder.io/api/v1/image/assets%2F44e3e188e75945c7957b904ccda3f1ae%2Fc1b2746894e54131b1ae91e0d6c8a0f0"
 process_eyebrow: What You Get With WealthBridge
+process_eyebrow_color: gold
 process_title: Your Plan to Keep More Wealth
+process_title_color: white
 process_subtitle: "A personalized strategy to fix the drains first. Corporate structure, and tax optimization strategies, and every other lever available to stop losing 50 cents on every dollar."
 process_image: "https://cdn.builder.io/api/v1/image/assets%2F44e3e188e75945c7957b904ccda3f1ae%2F3eb5f3de3d3646d6ba8816b6fb8589aa"
 process_cards:
@@ -59,6 +81,7 @@ process_cta_text: Want to learn more?
 process_cta_primary: Get Your Free Keep Rate Audit
 process_cta_secondary: "Or learn how to keep more wealth &rarr;"
 interested_title: Let's Talk
+interested_title_color: navy
 interested_box_title: This is for you if...
 interested_items:
   - text: "You believe (like us) that <strong>business owners are the foundation of Canada's economy</strong>"
@@ -68,7 +91,9 @@ interested_items:
   - text: "You're ready to <strong>stop accepting \"that's just how taxes work\"</strong> as an answer"
 interested_cta: Get Your Free Keep Rate Audit
 cta_eyebrow: Take the First Step
+cta_eyebrow_color: gold
 cta_title: What's your Keep Rate?
+cta_title_color: navy
 cta_subtitle: "Find out how much money you're losing every year - and get a free plan to keep more of it."
 cta_button_text: Get Your Free Keep Rate Audit
 cta_note: "Takes 30 minutes. No obligation. If we can't help, we'll tell you."
@@ -83,13 +108,13 @@ modal_success_text: "Check your email - we've just sent you a confirmation with 
 <section class="hero">
   <div class="container">
     <div class="hero__content">
-      <p class="hero__eyebrow animate" data-editable="text" data-prop="hero_eyebrow">{{ hero_eyebrow }}</p>
-      <h1 class="hero__title animate animate-delay-1">
+      <p class="hero__eyebrow animate text-color--{{ hero_eyebrow_color }}" data-editable="text" data-prop="hero_eyebrow">{{ hero_eyebrow }}</p>
+      <h1 class="hero__title animate animate-delay-1 text-color--{{ hero_title_color }}">
         <span data-editable="text" data-prop="hero_title">{{ hero_title }}</span>
-        <span data-editable="text" data-prop="hero_title_highlight">{{ hero_title_highlight }}</span>
+        <span class="text-color--{{ hero_title_highlight_color }}" data-editable="text" data-prop="hero_title_highlight">{{ hero_title_highlight }}</span>
         <span data-editable="text" data-prop="hero_title_end">{{ hero_title_end }}</span>
       </h1>
-      <p class="hero__subtitle animate animate-delay-2" data-editable="text" data-prop="hero_subtitle">{{ hero_subtitle }}</p>
+      <p class="hero__subtitle animate animate-delay-2 text-color--{{ hero_subtitle_color }}" data-editable="text" data-prop="hero_subtitle">{{ hero_subtitle }}</p>
       <div class="hero__cta animate animate-delay-3">
         <a href="{{ site.calendly_url }}" class="btn btn--primary btn--large" data-editable="text" data-prop="hero_cta_primary">{{ hero_cta_primary }}</a>
       </div>
@@ -101,15 +126,17 @@ modal_success_text: "Check your email - we've just sent you a confirmation with 
 <section class="quickproof section">
   <div class="container">
     <div class="quickproof__header">
-      <p class="eyebrow">{{ testimonials.section_eyebrow }}</p>
-      <h2>{{ testimonials.section_title }}</h2>
+      <p class="eyebrow" data-editable="text" data-prop="quickproof_eyebrow">{{ quickproof_eyebrow }}</p>
+      <h2 data-editable="text" data-prop="quickproof_title">{{ quickproof_title }}</h2>
     </div>
     <div class="quickproof__grid">
-      {% for item in testimonials.quick_proof %}
+      {% for item in quickproof_items %}
       <div class="quickproof__card fade-in">
+        {% if item.image %}
         <div class="quickproof__avatar">
-          <img src="{{ item.image }}" alt="{{ item.name }}">
+          <img src="{{ item.image }}" alt="{{ item.meta }}">
         </div>
+        {% endif %}
         <div class="quickproof__content">
           <h3 class="quickproof__headline">{{ item.headline }}</h3>
           <p class="quickproof__meta">{{ item.meta }}</p>
@@ -126,7 +153,7 @@ modal_success_text: "Check your email - we've just sent you a confirmation with 
   <div class="container">
     <div class="problem__header">
       <p class="eyebrow" data-editable="text" data-prop="problem_eyebrow">{{ problem_eyebrow }}</p>
-      <h2 data-editable="text" data-prop="problem_title">{{ problem_title }}</h2>
+      <h2 class="text-color--{{ problem_title_color }}" data-editable="text" data-prop="problem_title">{{ problem_title }}</h2>
     </div>
     <div class="problem__definition fade-in">
       <p class="problem__definition-text">
@@ -272,8 +299,8 @@ modal_success_text: "Check your email - we've just sent you a confirmation with 
 <section class="process section" id="process">
   <div class="container" style="display:flex;flex-direction:column">
     <div class="process__header" style="text-align:center">
-      <p class="eyebrow" data-editable="text" data-prop="process_eyebrow">{{ process_eyebrow }}</p>
-      <h2 style="margin:0 auto;font:600 48px/55.2px 'Source Serif 4', 'Source Serif 4 Fallback'" data-editable="text" data-prop="process_title">{{ process_title }}</h2>
+      <p class="eyebrow text-color--{{ process_eyebrow_color }}" data-editable="text" data-prop="process_eyebrow">{{ process_eyebrow }}</p>
+      <h2 class="text-color--{{ process_title_color }}" style="margin:0 auto;font:600 48px/55.2px 'Source Serif 4', 'Source Serif 4 Fallback'" data-editable="text" data-prop="process_title">{{ process_title }}</h2>
       <div style="color:rgba(255, 255, 255, 1);font-size:20px;font-weight:400;line-height:34px;max-width:650px;margin:20px auto 40px">
         <div data-editable="text" data-prop="process_subtitle">{{ process_subtitle }}</div>
       </div>
@@ -305,7 +332,7 @@ modal_success_text: "Check your email - we've just sent you a confirmation with 
 <section class="interested section" id="interested">
   <div class="container">
     <div class="interested__header">
-      <h2 data-editable="text" data-prop="interested_title">{{ interested_title }}</h2>
+      <h2 class="text-color--{{ interested_title_color }}" data-editable="text" data-prop="interested_title">{{ interested_title }}</h2>
     </div>
     <div class="interested__box fade-in">
       <h3 class="interested__box-title" data-editable="text" data-prop="interested_box_title">{{ interested_box_title }}</h3>
@@ -348,8 +375,8 @@ modal_success_text: "Check your email - we've just sent you a confirmation with 
 <section class="cta section" id="cta">
   <div class="container">
     <div class="cta__inner">
-      <p class="eyebrow" style="color:var(--gold)" data-editable="text" data-prop="cta_eyebrow">{{ cta_eyebrow }}</p>
-      <h2 class="cta__title" data-editable="text" data-prop="cta_title">{{ cta_title }}</h2>
+      <p class="eyebrow text-color--{{ cta_eyebrow_color }}" data-editable="text" data-prop="cta_eyebrow">{{ cta_eyebrow }}</p>
+      <h2 class="cta__title text-color--{{ cta_title_color }}" data-editable="text" data-prop="cta_title">{{ cta_title }}</h2>
       <p class="subtitle cta__subtitle" data-editable="text" data-prop="cta_subtitle">{{ cta_subtitle }}</p>
       <div class="cta__buttons">
         <a href="{{ site.calendly_url }}" class="btn btn--primary btn--large" data-editable="text" data-prop="cta_button_text">{{ cta_button_text }}</a>

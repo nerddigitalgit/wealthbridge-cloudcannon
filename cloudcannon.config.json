@@ -235,6 +235,76 @@
     "bold_text": {
       "type": "text",
       "label": "Bold Text"
+    },
+    "hero_eyebrow_color": {
+      "type": "select",
+      "label": "Eyebrow Color",
+      "options": {
+        "values": ["gold", "white", "navy", "sage", "slate"]
+      }
+    },
+    "hero_title_color": {
+      "type": "select",
+      "label": "Title Color",
+      "options": {
+        "values": ["gold", "white", "navy", "sage", "slate"]
+      }
+    },
+    "hero_title_highlight_color": {
+      "type": "select",
+      "label": "Highlight Color",
+      "options": {
+        "values": ["gold", "white", "navy", "sage", "slate"]
+      }
+    },
+    "hero_subtitle_color": {
+      "type": "select",
+      "label": "Subtitle Color",
+      "options": {
+        "values": ["gold", "white", "navy", "sage", "slate"]
+      }
+    },
+    "problem_title_color": {
+      "type": "select",
+      "label": "Title Color",
+      "options": {
+        "values": ["gold", "white", "navy", "sage", "slate"]
+      }
+    },
+    "process_eyebrow_color": {
+      "type": "select",
+      "label": "Eyebrow Color",
+      "options": {
+        "values": ["gold", "white", "navy", "sage", "slate"]
+      }
+    },
+    "process_title_color": {
+      "type": "select",
+      "label": "Title Color",
+      "options": {
+        "values": ["gold", "white", "navy", "sage", "slate"]
+      }
+    },
+    "interested_title_color": {
+      "type": "select",
+      "label": "Title Color",
+      "options": {
+        "values": ["gold", "white", "navy", "sage", "slate"]
+      }
+    },
+    "cta_eyebrow_color": {
+      "type": "select",
+      "label": "Eyebrow Color",
+      "options": {
+        "values": ["gold", "white", "navy", "sage", "slate"]
+      }
+    },
+    "cta_title_color": {
+      "type": "select",
+      "label": "Title Color",
+      "options": {
+        "values": ["gold", "white", "navy", "sage", "slate"]
+      }
     }
   },
   "_structures": {
