@@ -13,6 +13,21 @@
     "static": "assets",
     "uploads": "assets/uploads"
   },
+  "_editables": {
+    "text": {
+      "italic": true,
+      "bold": true,
+      "link": true
+    },
+    "block": {
+      "format": "p h2 h3",
+      "italic": true,
+      "bold": true,
+      "link": true,
+      "bulletedlist": true,
+      "numberedlist": true
+    }
+  },
   "collections_config": {
     "pages": {
       "path": "",
@@ -21,10 +36,10 @@
       "icon": "wysiwyg",
       "name": "Pages",
       "description": "Main website pages",
-      "_enabled_editors": ["visual", "content", "data"],
+      "_enabled_editors": ["visual", "data"],
       "filter": {
         "base": "none",
-        "include": ["index.html"]
+        "include": ["index.njk"]
       }
     },
     "landing_pages": {
@@ -34,7 +49,7 @@
       "icon": "rocket_launch",
       "name": "Landing Pages",
       "description": "Marketing and conversion landing pages",
-      "_enabled_editors": ["visual", "content", "data"]
+      "_enabled_editors": ["visual", "data"]
     },
     "data": {
       "path": "_data",
@@ -45,6 +60,9 @@
     }
   },
   "data_config": {
+    "homepage": {
+      "path": "_data/homepage.json"
+    },
     "site": {
       "path": "_data/site.json"
     },
@@ -235,21 +253,6 @@
           "is_positive": false
         }
       }
-    }
-  },
-  "_editables": {
-    "text": {
-      "italic": true,
-      "bold": true,
-      "link": true
-    },
-    "block": {
-      "format": "p h2 h3",
-      "italic": true,
-      "bold": true,
-      "link": true,
-      "bulletedlist": true,
-      "numberedlist": true
     }
   }
 }
