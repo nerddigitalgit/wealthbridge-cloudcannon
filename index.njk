@@ -7,15 +7,15 @@ title: WealthBridge Consulting | Raise Your Keep Rate
 <section class="hero">
   <div class="container">
     <div class="hero__content">
-      <p class="hero__eyebrow animate" data-cms-bind="#homepage.hero.eyebrow">{{ homepage.hero.eyebrow }}</p>
+      <p class="hero__eyebrow animate" data-editable="text" data-prop="homepage.hero.eyebrow">{{ homepage.hero.eyebrow }}</p>
       <h1 class="hero__title animate animate-delay-1">
-        <span data-cms-bind="#homepage.hero.title">{{ homepage.hero.title }}</span>
-        <span data-cms-bind="#homepage.hero.title_highlight">{{ homepage.hero.title_highlight }}</span>
-        <span data-cms-bind="#homepage.hero.title_end">{{ homepage.hero.title_end }}</span>
+        <span data-editable="text" data-prop="homepage.hero.title">{{ homepage.hero.title }}</span>
+        <span data-editable="text" data-prop="homepage.hero.title_highlight">{{ homepage.hero.title_highlight }}</span>
+        <span data-editable="text" data-prop="homepage.hero.title_end">{{ homepage.hero.title_end }}</span>
       </h1>
-      <p class="hero__subtitle animate animate-delay-2" data-cms-bind="#homepage.hero.subtitle">{{ homepage.hero.subtitle }}</p>
+      <p class="hero__subtitle animate animate-delay-2" data-editable="text" data-prop="homepage.hero.subtitle">{{ homepage.hero.subtitle }}</p>
       <div class="hero__cta animate animate-delay-3">
-        <a href="{{ site.calendly_url }}" class="btn btn--primary btn--large" data-cms-bind="#homepage.hero.cta_primary">{{ homepage.hero.cta_primary }}</a>
+        <a href="{{ site.calendly_url }}" class="btn btn--primary btn--large" data-editable="text" data-prop="homepage.hero.cta_primary">{{ homepage.hero.cta_primary }}</a>
       </div>
     </div>
   </div>
@@ -25,19 +25,19 @@ title: WealthBridge Consulting | Raise Your Keep Rate
 <section class="quickproof section">
   <div class="container">
     <div class="quickproof__header">
-      <p class="eyebrow" data-cms-bind="#testimonials.section_eyebrow">{{ testimonials.section_eyebrow }}</p>
-      <h2 data-cms-bind="#testimonials.section_title">{{ testimonials.section_title }}</h2>
+      <p class="eyebrow" data-editable="text" data-prop="testimonials.section_eyebrow">{{ testimonials.section_eyebrow }}</p>
+      <h2 data-editable="text" data-prop="testimonials.section_title">{{ testimonials.section_title }}</h2>
     </div>
-    <div class="quickproof__grid">
+    <div class="quickproof__grid" data-editable="array" data-prop="testimonials.quick_proof">
       {% for item in testimonials.quick_proof %}
-      <div class="quickproof__card fade-in">
+      <div class="quickproof__card fade-in" data-editable="array-item">
         <div class="quickproof__avatar">
-          <img src="{{ item.image }}" alt="{{ item.name }}" data-cms-bind="#testimonials.quick_proof[{{ loop.index0 }}].image">
+          <img src="{{ item.image }}" alt="{{ item.name }}" data-editable="image" data-prop-src="image">
         </div>
         <div class="quickproof__content">
-          <h3 class="quickproof__headline" data-cms-bind="#testimonials.quick_proof[{{ loop.index0 }}].headline">{{ item.headline }}</h3>
-          <p class="quickproof__meta" data-cms-bind="#testimonials.quick_proof[{{ loop.index0 }}].meta">{{ item.meta }}</p>
-          <p class="quickproof__text" data-cms-bind="#testimonials.quick_proof[{{ loop.index0 }}].text">{{ item.text }}</p>
+          <h3 class="quickproof__headline" data-editable="text" data-prop="headline">{{ item.headline }}</h3>
+          <p class="quickproof__meta" data-editable="text" data-prop="meta">{{ item.meta }}</p>
+          <p class="quickproof__text" data-editable="text" data-prop="text">{{ item.text }}</p>
         </div>
       </div>
       {% endfor %}
@@ -49,37 +49,37 @@ title: WealthBridge Consulting | Raise Your Keep Rate
 <section class="problem section" id="problem">
   <div class="container">
     <div class="problem__header">
-      <p class="eyebrow" data-cms-bind="#homepage.problem.eyebrow">{{ homepage.problem.eyebrow }}</p>
-      <h2 data-cms-bind="#homepage.problem.title">{{ homepage.problem.title }}</h2>
+      <p class="eyebrow" data-editable="text" data-prop="homepage.problem.eyebrow">{{ homepage.problem.eyebrow }}</p>
+      <h2 data-editable="text" data-prop="homepage.problem.title">{{ homepage.problem.title }}</h2>
     </div>
     <div class="problem__definition fade-in">
       <p class="problem__definition-text">
-        <strong class="problem__definition-term" data-cms-bind="#homepage.problem.definition.term">{{ homepage.problem.definition.term }}:</strong>
-        <span data-cms-bind="#homepage.problem.definition.text">{{ homepage.problem.definition.text }}</span>
+        <strong class="problem__definition-term" data-editable="text" data-prop="homepage.problem.definition.term">{{ homepage.problem.definition.term }}:</strong>
+        <span data-editable="text" data-prop="homepage.problem.definition.text">{{ homepage.problem.definition.text }}</span>
       </p>
     </div>
     <div class="problem__comparison fade-in">
       <div class="problem__comparison-grid">
         <div class="problem__column problem__column--left">
-          <h3 class="problem__column-title" data-cms-bind="#homepage.problem.comparison.left.title">{{ homepage.problem.comparison.left.title }}</h3>
-          <span class="problem__column-badge" data-cms-bind="#homepage.problem.comparison.left.badge">{{ homepage.problem.comparison.left.badge }}</span>
-          <ul class="problem__list">
+          <h3 class="problem__column-title" data-editable="text" data-prop="homepage.problem.comparison.left.title">{{ homepage.problem.comparison.left.title }}</h3>
+          <span class="problem__column-badge" data-editable="text" data-prop="homepage.problem.comparison.left.badge">{{ homepage.problem.comparison.left.badge }}</span>
+          <ul class="problem__list" data-editable="array" data-prop="homepage.problem.comparison.left.items">
             {% for item in homepage.problem.comparison.left.items %}
-            <li class="problem__item">
+            <li class="problem__item" data-editable="array-item">
               <span class="problem__item-icon">&#10007;</span>
-              <span class="problem__item-text">{{ item.text | safe }}</span>
+              <span class="problem__item-text" data-editable="text" data-prop="text">{{ item.text | safe }}</span>
             </li>
             {% endfor %}
           </ul>
         </div>
         <div class="problem__column problem__column--right">
-          <h3 class="problem__column-title" data-cms-bind="#homepage.problem.comparison.right.title">{{ homepage.problem.comparison.right.title }}</h3>
-          <span class="problem__column-badge" data-cms-bind="#homepage.problem.comparison.right.badge">{{ homepage.problem.comparison.right.badge }}</span>
-          <ul class="problem__list">
+          <h3 class="problem__column-title" data-editable="text" data-prop="homepage.problem.comparison.right.title">{{ homepage.problem.comparison.right.title }}</h3>
+          <span class="problem__column-badge" data-editable="text" data-prop="homepage.problem.comparison.right.badge">{{ homepage.problem.comparison.right.badge }}</span>
+          <ul class="problem__list" data-editable="array" data-prop="homepage.problem.comparison.right.items">
             {% for item in homepage.problem.comparison.right.items %}
-            <li class="problem__item">
+            <li class="problem__item" data-editable="array-item">
               <span class="problem__item-icon">&#10003;</span>
-              <span class="problem__item-text">{{ item.text | safe }}</span>
+              <span class="problem__item-text" data-editable="text" data-prop="text">{{ item.text | safe }}</span>
             </li>
             {% endfor %}
           </ul>
@@ -93,54 +93,31 @@ title: WealthBridge Consulting | Raise Your Keep Rate
 <section class="results-carousel section" id="results">
   <div class="container">
     <div class="results-carousel__header">
-      <p class="eyebrow" data-cms-bind="#results.section_eyebrow">{{ results.section_eyebrow }}</p>
-      <h2 data-cms-bind="#results.section_title">{{ results.section_title }}</h2>
-      <p class="subtitle" style="margin:20px auto 0;text-align:center" data-cms-bind="#results.section_subtitle">{{ results.section_subtitle }}</p>
+      <p class="eyebrow" data-editable="text" data-prop="results.section_eyebrow">{{ results.section_eyebrow }}</p>
+      <h2 data-editable="text" data-prop="results.section_title">{{ results.section_title }}</h2>
+      <p class="subtitle" style="margin:20px auto 0;text-align:center" data-editable="text" data-prop="results.section_subtitle">{{ results.section_subtitle }}</p>
     </div>
   </div>
   <div class="results-carousel__wrapper">
     <!-- Row 1 -->
-    <div class="results-carousel__row" id="carousel-row-1">
+    <div class="results-carousel__row" id="carousel-row-1" data-editable="array" data-prop="results.row_1">
       {% for card in results.row_1 %}
-      <div class="results-card">
+      <div class="results-card" data-editable="array-item">
         <div class="results-card__avatar">
-          <img src="{{ card.image }}" alt="{{ card.type }}">
+          <img src="{{ card.image }}" alt="{{ card.type }}" data-editable="image" data-prop-src="image">
         </div>
         <div class="results-card__content">
-          <span class="results-card__type">{{ card.type }}</span>
-          <h3 class="results-card__headline">{{ card.headline }}</h3>
-          <p class="results-card__text">{{ card.text }}</p>
+          <span class="results-card__type" data-editable="text" data-prop="type">{{ card.type }}</span>
+          <h3 class="results-card__headline" data-editable="text" data-prop="headline">{{ card.headline }}</h3>
+          <p class="results-card__text" data-editable="text" data-prop="text">{{ card.text }}</p>
           <div class="results-card__metrics">
             <div class="results-card__metric results-card__metric--before">
-              <p class="results-card__metric-label">{{ card.metric_before_label }}</p>
-              <p class="results-card__metric-value">{{ card.metric_before_value }}</p>
+              <p class="results-card__metric-label" data-editable="text" data-prop="metric_before_label">{{ card.metric_before_label }}</p>
+              <p class="results-card__metric-value" data-editable="text" data-prop="metric_before_value">{{ card.metric_before_value }}</p>
             </div>
             <div class="results-card__metric results-card__metric--after">
-              <p class="results-card__metric-label">{{ card.metric_after_label }}</p>
-              <p class="results-card__metric-value">{{ card.metric_after_value }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-      {# Duplicate for infinite scroll #}
-      {% for card in results.row_1 %}
-      <div class="results-card">
-        <div class="results-card__avatar">
-          <img src="{{ card.image }}" alt="{{ card.type }}">
-        </div>
-        <div class="results-card__content">
-          <span class="results-card__type">{{ card.type }}</span>
-          <h3 class="results-card__headline">{{ card.headline }}</h3>
-          <p class="results-card__text">{{ card.text }}</p>
-          <div class="results-card__metrics">
-            <div class="results-card__metric results-card__metric--before">
-              <p class="results-card__metric-label">{{ card.metric_before_label }}</p>
-              <p class="results-card__metric-value">{{ card.metric_before_value }}</p>
-            </div>
-            <div class="results-card__metric results-card__metric--after">
-              <p class="results-card__metric-label">{{ card.metric_after_label }}</p>
-              <p class="results-card__metric-value">{{ card.metric_after_value }}</p>
+              <p class="results-card__metric-label" data-editable="text" data-prop="metric_after_label">{{ card.metric_after_label }}</p>
+              <p class="results-card__metric-value" data-editable="text" data-prop="metric_after_value">{{ card.metric_after_value }}</p>
             </div>
           </div>
         </div>
@@ -149,47 +126,24 @@ title: WealthBridge Consulting | Raise Your Keep Rate
     </div>
 
     <!-- Row 2 -->
-    <div class="results-carousel__row" id="carousel-row-2">
+    <div class="results-carousel__row" id="carousel-row-2" data-editable="array" data-prop="results.row_2">
       {% for card in results.row_2 %}
-      <div class="results-card">
+      <div class="results-card" data-editable="array-item">
         <div class="results-card__avatar">
-          <img src="{{ card.image }}" alt="{{ card.type }}">
+          <img src="{{ card.image }}" alt="{{ card.type }}" data-editable="image" data-prop-src="image">
         </div>
         <div class="results-card__content">
-          <span class="results-card__type">{{ card.type }}</span>
-          <h3 class="results-card__headline">{{ card.headline }}</h3>
-          <p class="results-card__text">{{ card.text }}</p>
+          <span class="results-card__type" data-editable="text" data-prop="type">{{ card.type }}</span>
+          <h3 class="results-card__headline" data-editable="text" data-prop="headline">{{ card.headline }}</h3>
+          <p class="results-card__text" data-editable="text" data-prop="text">{{ card.text }}</p>
           <div class="results-card__metrics">
             <div class="results-card__metric results-card__metric--before">
-              <p class="results-card__metric-label">{{ card.metric_before_label }}</p>
-              <p class="results-card__metric-value">{{ card.metric_before_value }}</p>
+              <p class="results-card__metric-label" data-editable="text" data-prop="metric_before_label">{{ card.metric_before_label }}</p>
+              <p class="results-card__metric-value" data-editable="text" data-prop="metric_before_value">{{ card.metric_before_value }}</p>
             </div>
             <div class="results-card__metric results-card__metric--after">
-              <p class="results-card__metric-label">{{ card.metric_after_label }}</p>
-              <p class="results-card__metric-value">{{ card.metric_after_value }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-      {# Duplicate for infinite scroll #}
-      {% for card in results.row_2 %}
-      <div class="results-card">
-        <div class="results-card__avatar">
-          <img src="{{ card.image }}" alt="{{ card.type }}">
-        </div>
-        <div class="results-card__content">
-          <span class="results-card__type">{{ card.type }}</span>
-          <h3 class="results-card__headline">{{ card.headline }}</h3>
-          <p class="results-card__text">{{ card.text }}</p>
-          <div class="results-card__metrics">
-            <div class="results-card__metric results-card__metric--before">
-              <p class="results-card__metric-label">{{ card.metric_before_label }}</p>
-              <p class="results-card__metric-value">{{ card.metric_before_value }}</p>
-            </div>
-            <div class="results-card__metric results-card__metric--after">
-              <p class="results-card__metric-label">{{ card.metric_after_label }}</p>
-              <p class="results-card__metric-value">{{ card.metric_after_value }}</p>
+              <p class="results-card__metric-label" data-editable="text" data-prop="metric_after_label">{{ card.metric_after_label }}</p>
+              <p class="results-card__metric-value" data-editable="text" data-prop="metric_after_value">{{ card.metric_after_value }}</p>
             </div>
           </div>
         </div>
@@ -211,13 +165,13 @@ title: WealthBridge Consulting | Raise Your Keep Rate
     <div class="founder__card fade-in">
       <div class="founder__logo-header">
         <div class="founder__logo-line"></div>
-        <img src="{{ site.logo.icon }}" alt="WealthBridge" class="founder__logo-icon" data-cms-bind="#site.logo.icon">
+        <img src="{{ site.logo.icon }}" alt="WealthBridge" class="founder__logo-icon" data-editable="image" data-prop-src="site.logo.icon">
         <div class="founder__logo-line"></div>
       </div>
-      <p class="founder__greeting" data-cms-bind="#homepage.founder.greeting">{{ homepage.founder.greeting }}</p>
-      <div class="founder__story">
+      <p class="founder__greeting" data-editable="text" data-prop="homepage.founder.greeting">{{ homepage.founder.greeting }}</p>
+      <div class="founder__story" data-editable="array" data-prop="homepage.founder.story">
         {% for paragraph in homepage.founder.story %}
-        <p>{{ paragraph }}</p>
+        <p data-editable="array-item">{{ paragraph }}</p>
         {% endfor %}
       </div>
       <div class="founder__signature-area">
@@ -226,11 +180,11 @@ title: WealthBridge Consulting | Raise Your Keep Rate
         </svg>
         <div class="founder__signature-details">
           <div class="founder__signature-photo">
-            <img src="{{ homepage.founder.photo }}" alt="{{ homepage.founder.name }}" data-cms-bind="#homepage.founder.photo">
+            <img src="{{ homepage.founder.photo }}" alt="{{ homepage.founder.name }}" data-editable="image" data-prop-src="homepage.founder.photo">
           </div>
           <div>
-            <p class="founder__signature-name" data-cms-bind="#homepage.founder.name">{{ homepage.founder.name }}</p>
-            <p class="founder__signature-title" data-cms-bind="#homepage.founder.title">{{ homepage.founder.title }}</p>
+            <p class="founder__signature-name" data-editable="text" data-prop="homepage.founder.name">{{ homepage.founder.name }}</p>
+            <p class="founder__signature-title" data-editable="text" data-prop="homepage.founder.title">{{ homepage.founder.title }}</p>
           </div>
         </div>
       </div>
@@ -242,31 +196,31 @@ title: WealthBridge Consulting | Raise Your Keep Rate
 <section class="process section" id="process">
   <div class="container" style="display:flex;flex-direction:column">
     <div class="process__header" style="text-align:center">
-      <p class="eyebrow" data-cms-bind="#homepage.process.eyebrow">{{ homepage.process.eyebrow }}</p>
-      <h2 style="margin:0 auto;font:600 48px/55.2px 'Source Serif 4', 'Source Serif 4 Fallback'" data-cms-bind="#homepage.process.title">{{ homepage.process.title }}</h2>
+      <p class="eyebrow" data-editable="text" data-prop="homepage.process.eyebrow">{{ homepage.process.eyebrow }}</p>
+      <h2 style="margin:0 auto;font:600 48px/55.2px 'Source Serif 4', 'Source Serif 4 Fallback'" data-editable="text" data-prop="homepage.process.title">{{ homepage.process.title }}</h2>
       <div style="color:rgba(255, 255, 255, 1);font-size:20px;font-weight:400;line-height:34px;max-width:650px;margin:20px auto 40px">
-        <div data-cms-bind="#homepage.process.subtitle">{{ homepage.process.subtitle }}</div>
+        <div data-editable="text" data-prop="homepage.process.subtitle">{{ homepage.process.subtitle }}</div>
       </div>
     </div>
     <div class="process__layout">
-      <div class="process__cards">
+      <div class="process__cards" data-editable="array" data-prop="homepage.process.cards">
         {% for card in homepage.process.cards %}
-        <div class="process-card">
-          <h3 class="process-card__title" data-cms-bind="#homepage.process.cards[{{ loop.index0 }}].title">{{ card.title }}</h3>
-          <p class="process-card__text" data-cms-bind="#homepage.process.cards[{{ loop.index0 }}].text">{{ card.text }}</p>
+        <div class="process-card" data-editable="array-item">
+          <h3 class="process-card__title" data-editable="text" data-prop="title">{{ card.title }}</h3>
+          <p class="process-card__text" data-editable="text" data-prop="text">{{ card.text }}</p>
         </div>
         {% endfor %}
       </div>
       <div class="process__circles">
         <div class="circles-wrapper">
-          <img loading="lazy" src="{{ homepage.process.image }}" style="aspect-ratio:1;object-fit:cover;object-position:center;width:100%;margin-top:20px;min-height:20px;min-width:20px;overflow:hidden" alt="Network diagram" data-cms-bind="#homepage.process.image">
+          <img loading="lazy" src="{{ homepage.process.image }}" style="aspect-ratio:1;object-fit:cover;object-position:center;width:100%;margin-top:20px;min-height:20px;min-width:20px;overflow:hidden" alt="Network diagram" data-editable="image" data-prop-src="homepage.process.image">
         </div>
       </div>
     </div>
     <div class="process__cta">
-      <p class="process__cta-text" data-cms-bind="#homepage.process.cta_text">{{ homepage.process.cta_text }}</p>
-      <a href="{{ site.calendly_url }}" class="btn btn--white btn--large" data-cms-bind="#homepage.process.cta_primary">{{ homepage.process.cta_primary }}</a>
-      <a href="#" class="link process__cta-link" data-open-modal="course-modal" data-cms-bind="#homepage.process.cta_secondary">{{ homepage.process.cta_secondary | safe }}</a>
+      <p class="process__cta-text" data-editable="text" data-prop="homepage.process.cta_text">{{ homepage.process.cta_text }}</p>
+      <a href="{{ site.calendly_url }}" class="btn btn--white btn--large" data-editable="text" data-prop="homepage.process.cta_primary">{{ homepage.process.cta_primary }}</a>
+      <a href="#" class="link process__cta-link" data-open-modal="course-modal" data-editable="text" data-prop="homepage.process.cta_secondary">{{ homepage.process.cta_secondary | safe }}</a>
     </div>
   </div>
 </section>
@@ -275,20 +229,20 @@ title: WealthBridge Consulting | Raise Your Keep Rate
 <section class="interested section" id="interested">
   <div class="container">
     <div class="interested__header">
-      <h2 data-cms-bind="#homepage.interested.title">{{ homepage.interested.title }}</h2>
+      <h2 data-editable="text" data-prop="homepage.interested.title">{{ homepage.interested.title }}</h2>
     </div>
     <div class="interested__box fade-in">
-      <h3 class="interested__box-title" data-cms-bind="#homepage.interested.box_title">{{ homepage.interested.box_title }}</h3>
-      <ul class="interested__list">
+      <h3 class="interested__box-title" data-editable="text" data-prop="homepage.interested.box_title">{{ homepage.interested.box_title }}</h3>
+      <ul class="interested__list" data-editable="array" data-prop="homepage.interested.items">
         {% for item in homepage.interested.items %}
-        <li class="interested__item">
+        <li class="interested__item" data-editable="array-item">
           <span class="interested__item-bullet"></span>
-          <span>{{ item.text | safe }}</span>
+          <span data-editable="text" data-prop="text">{{ item.text | safe }}</span>
         </li>
         {% endfor %}
       </ul>
       <div class="interested__cta">
-        <a href="{{ site.calendly_url }}" class="btn btn--secondary btn--large" data-cms-bind="#homepage.interested.cta">{{ homepage.interested.cta }}</a>
+        <a href="{{ site.calendly_url }}" class="btn btn--secondary btn--large" data-editable="text" data-prop="homepage.interested.cta">{{ homepage.interested.cta }}</a>
       </div>
     </div>
   </div>
@@ -298,15 +252,15 @@ title: WealthBridge Consulting | Raise Your Keep Rate
 <section class="faq section" id="faq">
   <div class="container">
     <div class="faq__header">
-      <p class="eyebrow" data-cms-bind="#faq.section_eyebrow">{{ faq.section_eyebrow }}</p>
-      <h2 data-cms-bind="#faq.section_title">{{ faq.section_title }}</h2>
+      <p class="eyebrow" data-editable="text" data-prop="faq.section_eyebrow">{{ faq.section_eyebrow }}</p>
+      <h2 data-editable="text" data-prop="faq.section_title">{{ faq.section_title }}</h2>
     </div>
-    <div class="faq__list">
+    <div class="faq__list" data-editable="array" data-prop="faq.items">
       {% for item in faq.items %}
-      <div class="faq-item">
-        <button class="faq-item__question">{{ item.question }}<span class="faq-item__icon">+</span></button>
+      <div class="faq-item" data-editable="array-item">
+        <button class="faq-item__question"><span data-editable="text" data-prop="question">{{ item.question }}</span><span class="faq-item__icon">+</span></button>
         <div class="faq-item__answer">
-          <div class="faq-item__answer-inner">{{ item.answer }}</div>
+          <div class="faq-item__answer-inner" data-editable="text" data-prop="answer">{{ item.answer }}</div>
         </div>
       </div>
       {% endfor %}
@@ -318,13 +272,13 @@ title: WealthBridge Consulting | Raise Your Keep Rate
 <section class="cta section" id="cta">
   <div class="container">
     <div class="cta__inner">
-      <p class="eyebrow" style="color:var(--gold)" data-cms-bind="#homepage.cta.eyebrow">{{ homepage.cta.eyebrow }}</p>
-      <h2 class="cta__title" data-cms-bind="#homepage.cta.title">{{ homepage.cta.title }}</h2>
-      <p class="subtitle cta__subtitle" data-cms-bind="#homepage.cta.subtitle">{{ homepage.cta.subtitle }}</p>
+      <p class="eyebrow" style="color:var(--gold)" data-editable="text" data-prop="homepage.cta.eyebrow">{{ homepage.cta.eyebrow }}</p>
+      <h2 class="cta__title" data-editable="text" data-prop="homepage.cta.title">{{ homepage.cta.title }}</h2>
+      <p class="subtitle cta__subtitle" data-editable="text" data-prop="homepage.cta.subtitle">{{ homepage.cta.subtitle }}</p>
       <div class="cta__buttons">
-        <a href="{{ site.calendly_url }}" class="btn btn--primary btn--large" data-cms-bind="#homepage.cta.button_text">{{ homepage.cta.button_text }}</a>
+        <a href="{{ site.calendly_url }}" class="btn btn--primary btn--large" data-editable="text" data-prop="homepage.cta.button_text">{{ homepage.cta.button_text }}</a>
       </div>
-      <p class="cta__note" data-cms-bind="#homepage.cta.note">{{ homepage.cta.note }}</p>
+      <p class="cta__note" data-editable="text" data-prop="homepage.cta.note">{{ homepage.cta.note }}</p>
     </div>
   </div>
 </section>
@@ -334,19 +288,19 @@ title: WealthBridge Consulting | Raise Your Keep Rate
   <div class="modal">
     <button class="modal__close" aria-label="Close modal">&times;</button>
     <div class="modal__form" id="course-form-container">
-      <h3 class="modal__title" data-cms-bind="#homepage.modal.title">{{ homepage.modal.title }}</h3>
-      <p class="modal__description" data-cms-bind="#homepage.modal.description">{{ homepage.modal.description }}</p>
+      <h3 class="modal__title" data-editable="text" data-prop="homepage.modal.title">{{ homepage.modal.title }}</h3>
+      <p class="modal__description" data-editable="text" data-prop="homepage.modal.description">{{ homepage.modal.description }}</p>
       <form id="course-form">
         <div class="modal__form">
           <input type="email" class="modal__input" placeholder="Enter your email address" required name="email">
-          <button type="submit" class="modal__submit" data-cms-bind="#homepage.modal.button_text">{{ homepage.modal.button_text }}</button>
+          <button type="submit" class="modal__submit" data-editable="text" data-prop="homepage.modal.button_text">{{ homepage.modal.button_text }}</button>
         </div>
       </form>
     </div>
     <div class="modal__success" id="course-success">
       <div class="modal__success-icon">&#10003;</div>
-      <h3 class="modal__success-title" data-cms-bind="#homepage.modal.success_title">{{ homepage.modal.success_title }}</h3>
-      <p class="modal__success-text" data-cms-bind="#homepage.modal.success_text">{{ homepage.modal.success_text }}</p>
+      <h3 class="modal__success-title" data-editable="text" data-prop="homepage.modal.success_title">{{ homepage.modal.success_title }}</h3>
+      <p class="modal__success-text" data-editable="text" data-prop="homepage.modal.success_text">{{ homepage.modal.success_text }}</p>
     </div>
   </div>
 </div>
