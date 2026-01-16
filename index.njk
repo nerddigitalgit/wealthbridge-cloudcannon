@@ -26,6 +26,7 @@ quickproof_items:
     meta: "Medical Professional, Calgary"
     text: "The wealth plan they created projects $2.1M more in retirement savings compared to my previous approach."
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+show_results_carousel: false
 problem_eyebrow: The Problem
 problem_title_color: white
 problem_title: You have a low Keep Rate.
@@ -192,6 +193,7 @@ modal_success_text: "Check your email - we've just sent you a confirmation with 
   </div>
 </section>
 
+{% if show_results_carousel %}
 <!-- Results Carousel Section -->
 <section class="results-carousel section" id="results">
   <div class="container">
@@ -261,6 +263,7 @@ modal_success_text: "Check your email - we've just sent you a confirmation with 
     </div>
   </div>
 </section>
+{% endif %}
 
 <!-- Founder Section -->
 <section class="founder section" id="founder">

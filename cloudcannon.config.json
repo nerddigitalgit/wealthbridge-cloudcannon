@@ -305,6 +305,11 @@
       "options": {
         "values": ["gold", "white", "navy", "sage", "slate"]
       }
+    },
+    "show_results_carousel": {
+      "type": "switch",
+      "label": "Show Results Carousel",
+      "comment": "Toggle the two-row client results carousel section on/off"
     }
   },
   "_structures": {
