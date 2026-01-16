@@ -2,6 +2,14 @@
 layout: base.njk
 title: You're In! | WealthBridge Consulting
 description: Thank you for signing up for the free Keep Rate course. Check your email for your first lesson.
+confirm_title: You're In!
+confirm_subtitle: Check your inbox - your first lesson is on its way. Over the next 5 days, you'll learn the exact strategies the ultra-wealthy use to keep more of every dollar they earn.
+confirm_steps:
+  - text: Check your email - Your first lesson arrives within minutes
+  - text: Add us to contacts - So lessons don't go to spam
+  - text: Set aside 5 minutes daily - Each lesson is quick but powerful
+confirm_cta_text: Ready to take the next step?
+confirm_cta_button: Book Your Free Keep Rate Audit
 ---
 
 <!-- Confirmation Section -->
@@ -14,25 +22,25 @@ description: Thank you for signing up for the free Keep Rate course. Check your 
         </svg>
       </div>
 
-      <h1 class="confirmation__title" data-cms-bind="#course_confirm.title">{{ course_confirm.title }}</h1>
+      <h1 class="confirmation__title" data-editable="text" data-prop="confirm_title">{{ confirm_title }}</h1>
 
-      <p class="confirmation__text" data-cms-bind="#course_confirm.subtitle">{{ course_confirm.subtitle }}</p>
+      <p class="confirmation__text" data-editable="text" data-prop="confirm_subtitle">{{ confirm_subtitle }}</p>
 
       <div class="confirmation__steps">
         <p class="confirmation__steps-title">What happens next:</p>
         <div class="confirmation__steps-list">
-          {% for step in course_confirm.steps %}
+          {% for step in confirm_steps %}
           <div class="confirmation__step">
             <span class="confirmation__step-number">{{ loop.index }}</span>
-            <span data-cms-bind="#course_confirm.steps[{{ loop.index0 }}].text">{{ step.text | safe }}</span>
+            <span>{{ step.text | safe }}</span>
           </div>
           {% endfor %}
         </div>
       </div>
 
       <div style="margin-top: 32px;">
-        <p style="font-size: 16px; color: var(--slate); margin-bottom: 16px;" data-cms-bind="#course_confirm.cta_text">{{ course_confirm.cta_text }}</p>
-        <a href="/landing/book-audit/" class="btn btn--primary btn--large" data-cms-bind="#course_confirm.cta_button">{{ course_confirm.cta_button }}</a>
+        <p style="font-size: 16px; color: var(--slate); margin-bottom: 16px;" data-editable="text" data-prop="confirm_cta_text">{{ confirm_cta_text }}</p>
+        <a href="/landing/book-audit/" class="btn btn--primary btn--large" data-editable="text" data-prop="confirm_cta_button">{{ confirm_cta_button }}</a>
         <p style="font-size: 14px; color: var(--muted); margin-top: 16px;">30 minutes. No obligation. Personalized insights.</p>
       </div>
     </div>

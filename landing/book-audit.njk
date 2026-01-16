@@ -2,6 +2,70 @@
 layout: base.njk
 title: Free Keep Rate Audit | WealthBridge Consulting
 description: Book your free 30-minute Keep Rate Audit. Discover where your wealth is quietly leaking and get a personalized plan to keep more of what you earn.
+hero_badge: FREE 30-MINUTE AUDIT
+hero_title: Discover Your Keep Rate
+hero_subtitle: Find out exactly where your wealth is quietly leaking - and get a personalized plan to keep more of every dollar you earn.
+hero_features:
+  - bold_text: 30-minute call
+    description: Quick, focused analysis of your financial structure
+  - bold_text: No obligation
+    description: If we can't help, we'll tell you honestly
+  - bold_text: Actionable insights
+    description: Walk away with clarity on your next steps
+booking_title: Book Your Free Audit
+booking_subtitle: Select a time that works for you
+booking_embed_code: ""
+benefits_eyebrow: What You'll Discover
+benefits_title: Your Personalized Keep Rate Analysis
+benefits_cards:
+  - title: Your Current Keep Rate
+    text: We'll calculate exactly what percentage of your income you're actually keeping after taxes, fees, and wealth drains.
+  - title: Hidden Wealth Drains
+    text: Identify the specific areas where your money is quietly leaking - often in places you've never considered.
+  - title: Your Optimization Path
+    text: Get a clear roadmap of strategies that could help you keep more of what you earn - tailored to your situation.
+testimonials_eyebrow: Client Results
+testimonials_title: What Our Clients Say
+testimonials_items:
+  - result: $85K saved annually
+    quote: The audit revealed I was paying way more than I needed to. Within 3 months, we had restructured everything and I'm keeping $85K more per year.
+    name: James Morrison
+    role: Contractor, $350K Revenue
+    avatar: https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face
+  - result: $3.2M lifetime savings
+    quote: I'd been with the same accountant for 12 years. WealthBridge found opportunities no one had ever mentioned. The projected savings over my career are incredible.
+    name: Patricia Lee
+    role: Lawyer, Partner
+    avatar: https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face
+  - result: 50% to 12% tax rate
+    quote: I went from paying 50% in taxes to 12%. Same income, completely different outcome. I wish I'd known about this years ago.
+    name: Robert Kim
+    role: Consultant, $250K Income
+    avatar: https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face
+audience_eyebrow: Is This Right For You?
+audience_title: The Audit Is Perfect For You If...
+audience_box_title: "You're a Canadian business owner who:"
+audience_items:
+  - text: Has an <strong>incorporated business</strong>
+  - text: Earns <strong>$200K+ annually</strong>
+  - text: Has <strong>retained earnings</strong> in your corp
+  - text: Feels you should be <strong>further ahead</strong>
+  - text: Wants to <strong>build generational wealth</strong>
+  - text: Is ready to <strong>take action</strong>
+process_eyebrow: How It Works
+process_title: Your Path to a Higher Keep Rate
+process_steps:
+  - title: Book Your Call
+    text: Select a 30-minute slot that works for you. We'll send you a brief questionnaire to prepare.
+  - title: Discovery Call
+    text: We'll analyze your current structure, identify wealth drains, and calculate your Keep Rate.
+  - title: Get Your Roadmap
+    text: Walk away with clear next steps - whether that's working with us or implementing changes on your own.
+cta_eyebrow: Take the First Step
+cta_title: What's Your Keep Rate?
+cta_subtitle: Find out exactly where your wealth is going - and get a plan to keep more of it.
+cta_button: Get Your Free Keep Rate Audit
+cta_note: Takes 30 minutes. No obligation. If we can't help, we'll tell you.
 ---
 
 <!-- Hero Section -->
@@ -9,17 +73,17 @@ description: Book your free 30-minute Keep Rate Audit. Discover where your wealt
   <div class="container">
     <div class="hero__grid">
       <div class="hero__content">
-        <div class="hero__badge animate" data-cms-bind="#book_audit.hero.badge">{{ book_audit.hero.badge }}</div>
-        <h1 class="hero__title animate animate-delay-1" data-cms-bind="#book_audit.hero.title">{{ book_audit.hero.title | replace("Keep Rate", "<br><span>Keep Rate</span>") | safe }}</h1>
-        <p class="hero__subtitle animate animate-delay-2" data-cms-bind="#book_audit.hero.subtitle">{{ book_audit.hero.subtitle }}</p>
+        <div class="hero__badge animate" data-editable="text" data-prop="hero_badge">{{ hero_badge }}</div>
+        <h1 class="hero__title animate animate-delay-1" data-editable="text" data-prop="hero_title">{{ hero_title | replace("Keep Rate", "<br><span>Keep Rate</span>") | safe }}</h1>
+        <p class="hero__subtitle animate animate-delay-2" data-editable="text" data-prop="hero_subtitle">{{ hero_subtitle }}</p>
 
         <div class="hero__features animate animate-delay-3">
-          {% for feature in book_audit.hero.features %}
+          {% for feature in hero_features %}
           <div class="hero__feature">
             <span class="hero__feature-icon">
               <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             </span>
-            <span><strong data-cms-bind="#book_audit.hero.features[{{ loop.index0 }}].bold_text">{{ feature.bold_text }}</strong> - <span data-cms-bind="#book_audit.hero.features[{{ loop.index0 }}].description">{{ feature.description }}</span></span>
+            <span><strong>{{ feature.bold_text }}</strong> - {{ feature.description }}</span>
           </div>
           {% endfor %}
         </div>
@@ -28,13 +92,13 @@ description: Book your free 30-minute Keep Rate Audit. Discover where your wealt
       <!-- Booking Embed -->
       <div class="booking-embed animate animate-delay-2">
         <div class="booking-embed__header">
-          <h2 class="booking-embed__title" data-cms-bind="#book_audit.booking.title">{{ book_audit.booking.title }}</h2>
-          <p class="booking-embed__subtitle" data-cms-bind="#book_audit.booking.subtitle">{{ book_audit.booking.subtitle }}</p>
+          <h2 class="booking-embed__title" data-editable="text" data-prop="booking_title">{{ booking_title }}</h2>
+          <p class="booking-embed__subtitle" data-editable="text" data-prop="booking_subtitle">{{ booking_subtitle }}</p>
         </div>
 
-        {% if book_audit.booking.embed_code %}
-        <div class="booking-embed__calendly" data-cms-bind="#book_audit.booking.embed_code">
-          {{ book_audit.booking.embed_code | safe }}
+        {% if booking_embed_code %}
+        <div class="booking-embed__calendly">
+          {{ booking_embed_code | safe }}
         </div>
         {% else %}
         <div class="booking-embed__placeholder">
@@ -51,11 +115,11 @@ description: Book your free 30-minute Keep Rate Audit. Discover where your wealt
 <section class="benefits section section--white">
   <div class="container">
     <div class="benefits__header">
-      <p class="eyebrow" data-cms-bind="#book_audit.benefits.eyebrow">{{ book_audit.benefits.eyebrow }}</p>
-      <h2 data-cms-bind="#book_audit.benefits.title">{{ book_audit.benefits.title }}</h2>
+      <p class="eyebrow" data-editable="text" data-prop="benefits_eyebrow">{{ benefits_eyebrow }}</p>
+      <h2 data-editable="text" data-prop="benefits_title">{{ benefits_title }}</h2>
     </div>
     <div class="benefits__grid">
-      {% for card in book_audit.benefits.cards %}
+      {% for card in benefits_cards %}
       <div class="benefits__card">
         <div class="benefits__card-icon">
           {% if loop.index == 1 %}
@@ -66,8 +130,8 @@ description: Book your free 30-minute Keep Rate Audit. Discover where your wealt
           <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           {% endif %}
         </div>
-        <h3 class="benefits__card-title" data-cms-bind="#book_audit.benefits.cards[{{ loop.index0 }}].title">{{ card.title }}</h3>
-        <p class="benefits__card-text" data-cms-bind="#book_audit.benefits.cards[{{ loop.index0 }}].text">{{ card.text }}</p>
+        <h3 class="benefits__card-title">{{ card.title }}</h3>
+        <p class="benefits__card-text">{{ card.text }}</p>
       </div>
       {% endfor %}
     </div>
@@ -78,21 +142,21 @@ description: Book your free 30-minute Keep Rate Audit. Discover where your wealt
 <section class="testimonials section section--sage">
   <div class="container">
     <div class="testimonials__header">
-      <p class="eyebrow" data-cms-bind="#book_audit.testimonials.eyebrow">{{ book_audit.testimonials.eyebrow }}</p>
-      <h2 data-cms-bind="#book_audit.testimonials.title">{{ book_audit.testimonials.title }}</h2>
+      <p class="eyebrow" data-editable="text" data-prop="testimonials_eyebrow">{{ testimonials_eyebrow }}</p>
+      <h2 data-editable="text" data-prop="testimonials_title">{{ testimonials_title }}</h2>
     </div>
     <div class="testimonials__grid">
-      {% for item in book_audit.testimonials.items %}
+      {% for item in testimonials_items %}
       <div class="testimonial">
-        <span class="testimonial__result" data-cms-bind="#book_audit.testimonials.items[{{ loop.index0 }}].result">{{ item.result }}</span>
-        <p class="testimonial__quote" data-cms-bind="#book_audit.testimonials.items[{{ loop.index0 }}].quote">"{{ item.quote }}"</p>
+        <span class="testimonial__result">{{ item.result }}</span>
+        <p class="testimonial__quote">"{{ item.quote }}"</p>
         <div class="testimonial__author">
           <div class="testimonial__avatar">
-            <img src="{{ item.avatar }}" alt="{{ item.name }}" data-cms-bind="#book_audit.testimonials.items[{{ loop.index0 }}].avatar">
+            <img src="{{ item.avatar }}" alt="{{ item.name }}">
           </div>
           <div class="testimonial__info">
-            <p class="testimonial__name" data-cms-bind="#book_audit.testimonials.items[{{ loop.index0 }}].name">{{ item.name }}</p>
-            <p class="testimonial__role" data-cms-bind="#book_audit.testimonials.items[{{ loop.index0 }}].role">{{ item.role }}</p>
+            <p class="testimonial__name">{{ item.name }}</p>
+            <p class="testimonial__role">{{ item.role }}</p>
           </div>
         </div>
       </div>
@@ -105,18 +169,18 @@ description: Book your free 30-minute Keep Rate Audit. Discover where your wealt
 <section class="audience section section--cream">
   <div class="container">
     <div class="audience__header">
-      <p class="eyebrow" data-cms-bind="#book_audit.audience.eyebrow">{{ book_audit.audience.eyebrow }}</p>
-      <h2 data-cms-bind="#book_audit.audience.title">{{ book_audit.audience.title }}</h2>
+      <p class="eyebrow" data-editable="text" data-prop="audience_eyebrow">{{ audience_eyebrow }}</p>
+      <h2 data-editable="text" data-prop="audience_title">{{ audience_title }}</h2>
     </div>
     <div class="audience__box">
-      <h3 class="audience__box-title" data-cms-bind="#book_audit.audience.box_title">{{ book_audit.audience.box_title }}</h3>
+      <h3 class="audience__box-title" data-editable="text" data-prop="audience_box_title">{{ audience_box_title }}</h3>
       <div class="audience__grid">
-        {% for item in book_audit.audience.items %}
+        {% for item in audience_items %}
         <div class="audience__item">
           <span class="audience__item-icon">
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
           </span>
-          <span data-cms-bind="#book_audit.audience.items[{{ loop.index0 }}].text">{{ item.text | safe }}</span>
+          <span>{{ item.text | safe }}</span>
         </div>
         {% endfor %}
       </div>
@@ -131,11 +195,11 @@ description: Book your free 30-minute Keep Rate Audit. Discover where your wealt
 <section class="process section section--brown">
   <div class="container">
     <div class="process__header">
-      <p class="eyebrow" data-cms-bind="#book_audit.process.eyebrow">{{ book_audit.process.eyebrow }}</p>
-      <h2 data-cms-bind="#book_audit.process.title">{{ book_audit.process.title }}</h2>
+      <p class="eyebrow" data-editable="text" data-prop="process_eyebrow">{{ process_eyebrow }}</p>
+      <h2 data-editable="text" data-prop="process_title">{{ process_title }}</h2>
     </div>
     <div class="process__steps">
-      {% for step in book_audit.process.steps %}
+      {% for step in process_steps %}
       <div class="process__step">
         <div class="process__step-icon">
           {% if loop.index == 1 %}
@@ -146,8 +210,8 @@ description: Book your free 30-minute Keep Rate Audit. Discover where your wealt
           <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           {% endif %}
         </div>
-        <h3 class="process__step-title" data-cms-bind="#book_audit.process.steps[{{ loop.index0 }}].title">{{ loop.index }}. {{ step.title }}</h3>
-        <p class="process__step-text" data-cms-bind="#book_audit.process.steps[{{ loop.index0 }}].text">{{ step.text }}</p>
+        <h3 class="process__step-title">{{ loop.index }}. {{ step.title }}</h3>
+        <p class="process__step-text">{{ step.text }}</p>
       </div>
       {% endfor %}
     </div>
@@ -161,11 +225,11 @@ description: Book your free 30-minute Keep Rate Audit. Discover where your wealt
 <section class="cta section section--cream">
   <div class="container">
     <div class="cta__inner">
-      <p class="eyebrow" data-cms-bind="#book_audit.cta.eyebrow">{{ book_audit.cta.eyebrow }}</p>
-      <h2 class="cta__title" data-cms-bind="#book_audit.cta.title">{{ book_audit.cta.title }}</h2>
-      <p class="subtitle cta__subtitle" data-cms-bind="#book_audit.cta.subtitle">{{ book_audit.cta.subtitle }}</p>
-      <a href="#" class="btn btn--primary btn--large" onclick="document.querySelector('.hero').scrollIntoView({behavior: 'smooth'}); return false;" data-cms-bind="#book_audit.cta.button">{{ book_audit.cta.button }}</a>
-      <p class="cta__note" data-cms-bind="#book_audit.cta.note">{{ book_audit.cta.note }}</p>
+      <p class="eyebrow" data-editable="text" data-prop="cta_eyebrow">{{ cta_eyebrow }}</p>
+      <h2 class="cta__title" data-editable="text" data-prop="cta_title">{{ cta_title }}</h2>
+      <p class="subtitle cta__subtitle" data-editable="text" data-prop="cta_subtitle">{{ cta_subtitle }}</p>
+      <a href="#" class="btn btn--primary btn--large" onclick="document.querySelector('.hero').scrollIntoView({behavior: 'smooth'}); return false;" data-editable="text" data-prop="cta_button">{{ cta_button }}</a>
+      <p class="cta__note" data-editable="text" data-prop="cta_note">{{ cta_note }}</p>
     </div>
   </div>
 </section>
