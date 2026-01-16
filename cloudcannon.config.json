@@ -4,7 +4,8 @@
     "data": "_data",
     "layouts": "_layouts",
     "includes": "_includes",
-    "static": "assets"
+    "static": "assets",
+    "uploads": "assets/uploads"
   },
   "collections_config": {
     "pages": {
