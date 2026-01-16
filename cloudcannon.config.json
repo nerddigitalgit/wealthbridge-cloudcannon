@@ -1,5 +1,7 @@
 {
   "source": "",
+  "timezone": "America/Toronto",
+  "base_url": "/",
   "paths": {
     "data": "_data",
     "layouts": "_layouts",
@@ -16,10 +18,9 @@
       "name": "Pages",
       "description": "Main website pages",
       "_enabled_editors": ["visual", "content", "data"],
-      "schemas": {
-        "default": {
-          "path": "_schemas/page.json"
-        }
+      "filter": {
+        "base": "none",
+        "include": ["index.html"]
       }
     },
     "landing_pages": {
