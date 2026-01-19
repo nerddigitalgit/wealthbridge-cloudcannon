@@ -1,18 +1,4 @@
 {
-  "source": "",
-  "output": "_site",
-  "timezone": "America/Toronto",
-  "base_url": "/",
-  "_generator": {
-    "name": "eleventy",
-    "version": "2.0",
-    "metadata": {
-      "markdown": "markdown-it",
-      "markdown_options": {
-        "html": true
-      }
-    }
-  },
   "paths": {
     "data": "_data",
     "layouts": "_layouts",
@@ -20,52 +6,462 @@
     "static": "assets",
     "uploads": "assets/uploads"
   },
-  "_editables": {
-    "text": {
-      "italic": true,
-      "bold": true,
-      "link": true
-    },
-    "block": {
-      "format": "p h2 h3",
-      "italic": true,
-      "bold": true,
-      "link": true,
-      "bulletedlist": true,
-      "numberedlist": true
-    }
-  },
   "collections_config": {
     "pages": {
       "path": "",
-      "url": "/[slug]/",
-      "output": true,
-      "icon": "wysiwyg",
       "name": "Pages",
+      "icon": "wysiwyg",
+      "url": "/[slug]/",
+      "disable_url": false,
       "description": "Main website pages",
-      "_enabled_editors": ["visual", "data"],
-      "filter": {
-        "base": "none",
-        "include": ["index.njk"]
-      }
+      "_enabled_editors": [
+        "visual",
+        "data"
+      ],
+      "disable_add": false,
+      "disable_add_folder": false,
+      "disable_file_actions": false
     },
     "landing_pages": {
       "path": "landing",
-      "url": "/landing/[slug]/",
-      "output": true,
-      "icon": "rocket_launch",
       "name": "Landing Pages",
+      "icon": "rocket_launch",
+      "url": "/landing/[slug]/",
+      "disable_url": false,
       "description": "Marketing and conversion landing pages",
-      "_enabled_editors": ["visual", "data"]
+      "_enabled_editors": [
+        "visual",
+        "data"
+      ],
+      "disable_add": false,
+      "disable_add_folder": false,
+      "disable_file_actions": false
     },
     "data": {
       "path": "_data",
-      "output": false,
-      "icon": "settings",
       "name": "Site Data",
-      "description": "Global site configuration and content"
+      "icon": "settings",
+      "disable_url": false,
+      "description": "Global site configuration and content",
+      "disable_add": false,
+      "disable_add_folder": false,
+      "disable_file_actions": false
     }
   },
+  "_inputs": {
+    "title": {
+      "type": "text",
+      "label": "Page Title",
+      "cascade": true
+    },
+    "description": {
+      "type": "textarea",
+      "label": "Meta Description",
+      "cascade": true
+    },
+    "hero_eyebrow": {
+      "type": "text",
+      "label": "Eyebrow Text",
+      "cascade": true
+    },
+    "hero_title": {
+      "type": "text",
+      "label": "Hero Title",
+      "cascade": true
+    },
+    "hero_title_highlight": {
+      "type": "text",
+      "label": "Highlighted Word",
+      "cascade": true
+    },
+    "hero_subtitle": {
+      "type": "textarea",
+      "label": "Hero Subtitle",
+      "cascade": true
+    },
+    "cta_text": {
+      "type": "text",
+      "label": "Button Text",
+      "cascade": true
+    },
+    "cta_url": {
+      "type": "url",
+      "label": "Button URL",
+      "cascade": true
+    },
+    "image": {
+      "type": "image",
+      "label": "Image",
+      "cascade": true
+    },
+    "content": {
+      "type": "markdown",
+      "label": "Content",
+      "cascade": true
+    },
+    "quote": {
+      "type": "textarea",
+      "label": "Quote Text",
+      "cascade": true
+    },
+    "name": {
+      "type": "text",
+      "cascade": true
+    },
+    "role": {
+      "type": "text",
+      "cascade": true
+    },
+    "headline": {
+      "type": "text",
+      "cascade": true
+    },
+    "metric_before": {
+      "type": "text",
+      "label": "Before Value",
+      "cascade": true
+    },
+    "metric_after": {
+      "type": "text",
+      "label": "After Value",
+      "cascade": true
+    },
+    "question": {
+      "type": "text",
+      "label": "Question",
+      "cascade": true
+    },
+    "answer": {
+      "type": "markdown",
+      "label": "Answer",
+      "cascade": true
+    },
+    "badge": {
+      "type": "text",
+      "label": "Badge Text",
+      "cascade": true
+    },
+    "eyebrow": {
+      "type": "text",
+      "label": "Eyebrow Text",
+      "cascade": true
+    },
+    "subtitle": {
+      "type": "textarea",
+      "label": "Subtitle",
+      "cascade": true
+    },
+    "button": {
+      "type": "text",
+      "label": "Button Text",
+      "cascade": true
+    },
+    "note": {
+      "type": "text",
+      "label": "Note Text",
+      "cascade": true
+    },
+    "webhook_url": {
+      "type": "url",
+      "label": "Webhook URL",
+      "cascade": true
+    },
+    "redirect_url": {
+      "type": "text",
+      "label": "Redirect URL",
+      "cascade": true
+    },
+    "embed_code": {
+      "type": "code",
+      "label": "Embed Code",
+      "cascade": true
+    },
+    "bio": {
+      "type": "markdown",
+      "label": "Biography",
+      "cascade": true
+    },
+    "credentials": {
+      "type": "text",
+      "label": "Credentials",
+      "cascade": true
+    },
+    "photo": {
+      "type": "image",
+      "label": "Photo",
+      "cascade": true
+    },
+    "avatar": {
+      "type": "image",
+      "options": {
+        "paths": null,
+        "allowed_sources": null,
+        "disable_upload_file": null,
+        "disable_direct_input": null,
+        "disable_upload_file_in_file_browser": null,
+        "mime_type": null,
+        "accepts_mime_types": null,
+        "resize_style": null,
+        "width": 100,
+        "height": 100,
+        "expandable": true,
+        "prevent_resize_existing_files": true,
+        "sizes": null,
+        "max_file_size": null,
+        "max_file_size_message": null,
+        "required": null,
+        "required_message": null,
+        "min_length": null,
+        "min_length_message": null,
+        "max_length": null,
+        "max_length_message": null,
+        "min_graphemes": null,
+        "min_graphemes_message": null,
+        "max_graphemes": null,
+        "max_graphemes_message": null,
+        "min_words": null,
+        "min_words_message": null,
+        "max_words": null,
+        "max_words_message": null,
+        "locale": null,
+        "pattern": null,
+        "pattern_message": null,
+        "empty_type": null
+      },
+      "label": "Avatar",
+      "cascade": true
+    },
+    "takeaway": {
+      "type": "text",
+      "label": "Key Takeaway",
+      "cascade": true
+    },
+    "result": {
+      "type": "text",
+      "label": "Result Badge",
+      "cascade": true
+    },
+    "value": {
+      "type": "text",
+      "label": "Stat Value",
+      "cascade": true
+    },
+    "label": {
+      "type": "text",
+      "label": "Stat Label",
+      "cascade": true
+    },
+    "bold_text": {
+      "type": "text",
+      "label": "Bold Text",
+      "cascade": true
+    },
+    "hero_eyebrow_color": {
+      "type": "select",
+      "options": {
+        "allow_empty": true,
+        "values": [
+          "gold",
+          "white",
+          "navy",
+          "sage",
+          "slate"
+        ]
+      },
+      "label": "Eyebrow Color",
+      "cascade": true
+    },
+    "hero_title_color": {
+      "type": "select",
+      "options": {
+        "allow_empty": true,
+        "values": [
+          "gold",
+          "white",
+          "navy",
+          "sage",
+          "slate"
+        ]
+      },
+      "label": "Title Color",
+      "cascade": true
+    },
+    "hero_title_highlight_color": {
+      "type": "select",
+      "options": {
+        "allow_empty": true,
+        "values": [
+          "gold",
+          "white",
+          "navy",
+          "sage",
+          "slate"
+        ]
+      },
+      "label": "Highlight Color",
+      "cascade": true
+    },
+    "hero_subtitle_color": {
+      "type": "select",
+      "options": {
+        "allow_empty": true,
+        "values": [
+          "gold",
+          "white",
+          "navy",
+          "sage",
+          "slate"
+        ]
+      },
+      "label": "Subtitle Color",
+      "cascade": true
+    },
+    "problem_title_color": {
+      "type": "select",
+      "options": {
+        "allow_empty": true,
+        "values": [
+          "gold",
+          "white",
+          "navy",
+          "sage",
+          "slate"
+        ]
+      },
+      "label": "Title Color",
+      "cascade": true
+    },
+    "process_eyebrow_color": {
+      "type": "select",
+      "options": {
+        "allow_empty": true,
+        "values": [
+          "gold",
+          "white",
+          "navy",
+          "sage",
+          "slate"
+        ]
+      },
+      "label": "Eyebrow Color",
+      "cascade": true
+    },
+    "process_title_color": {
+      "type": "select",
+      "options": {
+        "allow_empty": true,
+        "values": [
+          "gold",
+          "white",
+          "navy",
+          "sage",
+          "slate"
+        ]
+      },
+      "label": "Title Color",
+      "cascade": true
+    },
+    "interested_title_color": {
+      "type": "select",
+      "options": {
+        "allow_empty": true,
+        "values": [
+          "gold",
+          "white",
+          "navy",
+          "sage",
+          "slate"
+        ]
+      },
+      "label": "Title Color",
+      "cascade": true
+    },
+    "cta_eyebrow_color": {
+      "type": "select",
+      "options": {
+        "allow_empty": true,
+        "values": [
+          "gold",
+          "white",
+          "navy",
+          "sage",
+          "slate"
+        ]
+      },
+      "label": "Eyebrow Color",
+      "cascade": true
+    },
+    "cta_title_color": {
+      "type": "select",
+      "options": {
+        "allow_empty": true,
+        "values": [
+          "gold",
+          "white",
+          "navy",
+          "sage",
+          "slate"
+        ]
+      },
+      "label": "Title Color",
+      "cascade": true
+    },
+    "show_results_carousel": {
+      "type": "switch",
+      "label": "Show Results Carousel",
+      "comment": "Toggle the two-row client results carousel section on/off",
+      "cascade": true
+    }
+  },
+  "_structures": {
+    "process_cards": {
+      "style": "select",
+      "values": {
+        "value": {
+          "title": "",
+          "description": ""
+        }
+      }
+    },
+    "interested_items": {
+      "style": "select",
+      "values": {
+        "value": {
+          "text": ""
+        }
+      }
+    },
+    "problem_items": {
+      "style": "select",
+      "values": {
+        "value": {
+          "text": "",
+          "is_positive": false
+        }
+      }
+    }
+  },
+  "_editables": {
+    "text": {
+      "allow_custom_markup": true,
+      "remove_custom_markup": false,
+      "bold": true,
+      "italic": true,
+      "link": true
+    },
+    "block": {
+      "allow_custom_markup": false,
+      "remove_custom_markup": false,
+      "bold": true,
+      "bulletedlist": true,
+      "format": "p h2 h3",
+      "image_size_attributes": true,
+      "italic": true,
+      "link": true,
+      "numberedlist": true
+    }
+  },
+  "base_url": "/",
   "data_config": {
     "homepage": {
       "path": "_data/homepage.json"
@@ -98,242 +494,15 @@
       "path": "_data/course_confirm.json"
     }
   },
-  "_inputs": {
-    "title": {
-      "type": "text",
-      "label": "Page Title"
-    },
-    "description": {
-      "type": "textarea",
-      "label": "Meta Description"
-    },
-    "hero_eyebrow": {
-      "type": "text",
-      "label": "Eyebrow Text"
-    },
-    "hero_title": {
-      "type": "text",
-      "label": "Hero Title"
-    },
-    "hero_title_highlight": {
-      "type": "text",
-      "label": "Highlighted Word"
-    },
-    "hero_subtitle": {
-      "type": "textarea",
-      "label": "Hero Subtitle"
-    },
-    "cta_text": {
-      "type": "text",
-      "label": "Button Text"
-    },
-    "cta_url": {
-      "type": "url",
-      "label": "Button URL"
-    },
-    "image": {
-      "type": "image",
-      "label": "Image"
-    },
-    "content": {
-      "type": "markdown",
-      "label": "Content"
-    },
-    "quote": {
-      "type": "textarea",
-      "label": "Quote Text"
-    },
-    "name": {
-      "type": "text"
-    },
-    "role": {
-      "type": "text"
-    },
-    "headline": {
-      "type": "text"
-    },
-    "metric_before": {
-      "type": "text",
-      "label": "Before Value"
-    },
-    "metric_after": {
-      "type": "text",
-      "label": "After Value"
-    },
-    "question": {
-      "type": "text",
-      "label": "Question"
-    },
-    "answer": {
-      "type": "markdown",
-      "label": "Answer"
-    },
-    "badge": {
-      "type": "text",
-      "label": "Badge Text"
-    },
-    "eyebrow": {
-      "type": "text",
-      "label": "Eyebrow Text"
-    },
-    "subtitle": {
-      "type": "textarea",
-      "label": "Subtitle"
-    },
-    "button": {
-      "type": "text",
-      "label": "Button Text"
-    },
-    "note": {
-      "type": "text",
-      "label": "Note Text"
-    },
-    "webhook_url": {
-      "type": "url",
-      "label": "Webhook URL"
-    },
-    "redirect_url": {
-      "type": "text",
-      "label": "Redirect URL"
-    },
-    "embed_code": {
-      "type": "code",
-      "label": "Embed Code"
-    },
-    "bio": {
-      "type": "markdown",
-      "label": "Biography"
-    },
-    "credentials": {
-      "type": "text",
-      "label": "Credentials"
-    },
-    "photo": {
-      "type": "image",
-      "label": "Photo"
-    },
-    "avatar": {
-      "type": "image",
-      "label": "Avatar"
-    },
-    "takeaway": {
-      "type": "text",
-      "label": "Key Takeaway"
-    },
-    "result": {
-      "type": "text",
-      "label": "Result Badge"
-    },
-    "value": {
-      "type": "text",
-      "label": "Stat Value"
-    },
-    "label": {
-      "type": "text",
-      "label": "Stat Label"
-    },
-    "bold_text": {
-      "type": "text",
-      "label": "Bold Text"
-    },
-    "hero_eyebrow_color": {
-      "type": "select",
-      "label": "Eyebrow Color",
-      "options": {
-        "values": ["gold", "white", "navy", "sage", "slate"]
-      }
-    },
-    "hero_title_color": {
-      "type": "select",
-      "label": "Title Color",
-      "options": {
-        "values": ["gold", "white", "navy", "sage", "slate"]
-      }
-    },
-    "hero_title_highlight_color": {
-      "type": "select",
-      "label": "Highlight Color",
-      "options": {
-        "values": ["gold", "white", "navy", "sage", "slate"]
-      }
-    },
-    "hero_subtitle_color": {
-      "type": "select",
-      "label": "Subtitle Color",
-      "options": {
-        "values": ["gold", "white", "navy", "sage", "slate"]
-      }
-    },
-    "problem_title_color": {
-      "type": "select",
-      "label": "Title Color",
-      "options": {
-        "values": ["gold", "white", "navy", "sage", "slate"]
-      }
-    },
-    "process_eyebrow_color": {
-      "type": "select",
-      "label": "Eyebrow Color",
-      "options": {
-        "values": ["gold", "white", "navy", "sage", "slate"]
-      }
-    },
-    "process_title_color": {
-      "type": "select",
-      "label": "Title Color",
-      "options": {
-        "values": ["gold", "white", "navy", "sage", "slate"]
-      }
-    },
-    "interested_title_color": {
-      "type": "select",
-      "label": "Title Color",
-      "options": {
-        "values": ["gold", "white", "navy", "sage", "slate"]
-      }
-    },
-    "cta_eyebrow_color": {
-      "type": "select",
-      "label": "Eyebrow Color",
-      "options": {
-        "values": ["gold", "white", "navy", "sage", "slate"]
-      }
-    },
-    "cta_title_color": {
-      "type": "select",
-      "label": "Title Color",
-      "options": {
-        "values": ["gold", "white", "navy", "sage", "slate"]
-      }
-    },
-    "show_results_carousel": {
-      "type": "switch",
-      "label": "Show Results Carousel",
-      "comment": "Toggle the two-row client results carousel section on/off"
-    }
-  },
-  "_structures": {
-    "process_cards": {
-      "values": {
-        "value": {
-          "title": "",
-          "description": ""
-        }
-      }
-    },
-    "interested_items": {
-      "values": {
-        "value": {
-          "text": ""
-        }
-      }
-    },
-    "problem_items": {
-      "values": {
-        "value": {
-          "text": "",
-          "is_positive": false
-        }
+  "timezone": "America/Toronto",
+  "output": "_site",
+  "_generator": {
+    "name": "eleventy",
+    "version": "2.0",
+    "metadata": {
+      "markdown": "markdown-it",
+      "markdown_options": {
+        "html": true
       }
     }
   }
