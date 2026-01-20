@@ -1,12 +1,17 @@
 ---
 title: How to Sell Your Business and Pay Less in Taxes in 2026
-date: 2026-01-18
+date: 2026-01-18T00:00:00Z
 author: Behi Shafiei
 author_title: Founder, WealthBridge Consulting
-author_image: https://cdn.builder.io/api/v1/image/assets%2F44e3e188e75945c7957b904ccda3f1ae%2Fc1b2746894e54131b1ae91e0d6c8a0f0
+author_image: >-
+  https://cdn.builder.io/api/v1/image/assets%2F44e3e188e75945c7957b904ccda3f1ae%2Fc1b2746894e54131b1ae91e0d6c8a0f0
 category: Tax Strategy
-excerpt: Selling your business could be the largest financial transaction of your life. Without proper planning, you could lose 30-50% of the sale proceeds to taxes. Here's how smart entrepreneurs are structuring their exits in 2026.
-featured_image: https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=600&fit=crop
+excerpt: >-
+  Selling your business could be the largest financial transaction of your life.
+  Without proper planning, you could lose 30-50% of the sale proceeds to taxes.
+  Here's how smart entrepreneurs are structuring their exits in 2026.
+featured_image: >-
+  https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=600&fit=crop
 reading_time: 10
 tags:
   - business sale
@@ -15,7 +20,6 @@ tags:
   - capital gains
   - LCGE
 ---
-
 After years of building your business, the decision to sell is both exciting and terrifying. You've created something valuable, and now you're about to realize that value in a life-changing transaction.
 
 But here's what most entrepreneurs don't fully appreciate until it's too late: **without proper tax planning, you could hand over 30-50% of your sale proceeds to the CRA.**
@@ -30,9 +34,9 @@ When you sell your business, the proceeds are generally taxed as capital gains. 
 
 For a successful business sale, you could be looking at:
 
-- **Capital gains inclusion**: A portion of your gain is added to your income
-- **Provincial + Federal taxes**: Combined rates vary by province
-- **Alternative Minimum Tax (AMT)**: Can catch high-value transactions
+* **Capital gains inclusion**: A portion of your gain is added to your income
+* **Provincial + Federal taxes**: Combined rates vary by province
+* **Alternative Minimum Tax (AMT)**: Can catch high-value transactions
 
 For a business owner in Ontario selling for $5 million, poor planning could mean paying well over $1 million in taxes. Proper planning could reduce that significantly.
 
@@ -86,17 +90,17 @@ The structure of your sale dramatically impacts your tax outcome.
 
 Selling shares rather than assets typically provides:
 
-- **LCGE eligibility**: Only available on share sales
-- **Single layer of tax**: Proceeds go directly to shareholders
-- **Cleaner exit**: Liabilities stay with the corporation
+* **LCGE eligibility**: Only available on share sales
+* **Single layer of tax**: Proceeds go directly to shareholders
+* **Cleaner exit**: Liabilities stay with the corporation
 
 ### Asset Sale Considerations
 
 Buyers often prefer asset purchases because:
 
-- They can step up the tax cost of assets
-- They don't inherit unknown liabilities
-- They can cherry-pick desired assets
+* They can step up the tax cost of assets
+* They don't inherit unknown liabilities
+* They can cherry-pick desired assets
 
 The tax cost difference between asset and share sales can be substantial. This is often a key negotiation point in deal structuring.
 
@@ -104,9 +108,9 @@ The tax cost difference between asset and share sales can be substantial. This i
 
 Many business sales include earn-out provisions - additional payments contingent on future performance. While these can maximize total sale price, they create tax complications:
 
-- **Uncertain timing** of income recognition
-- **Potential for ordinary income treatment** vs. capital gains
-- **Cash flow challenges** - you may owe tax before receiving payment
+* **Uncertain timing** of income recognition
+* **Potential for ordinary income treatment** vs. capital gains
+* **Cash flow challenges** - you may owe tax before receiving payment
 
 Proper structuring of earn-outs is essential for tax efficiency.
 
@@ -132,9 +136,9 @@ The work doesn't end when the deal closes. How you manage the proceeds determine
 
 ### Immediate Considerations
 
-- **Tax installment planning**: Avoid penalties and interest
-- **Investment strategy**: Where does the cash go?
-- **Estate planning**: Protect wealth for future generations
+* **Tax installment planning**: Avoid penalties and interest
+* **Investment strategy**: Where does the cash go?
+* **Estate planning**: Protect wealth for future generations
 
 ### Common Post-Sale Mistakes
 
@@ -149,30 +153,30 @@ Here's what proper exit planning looks like:
 
 ### 3-5 Years Before Sale
 
-- Review corporate structure
-- Implement family trust planning if appropriate
-- Begin purification if needed
-- Document everything
+* Review corporate structure
+* Implement family trust planning if appropriate
+* Begin purification if needed
+* Document everything
 
 ### 1-2 Years Before Sale
 
-- Confirm QSBC status
-- Clean up any structural issues
-- Prepare for due diligence
-- Engage professional advisors
+* Confirm QSBC status
+* Clean up any structural issues
+* Prepare for due diligence
+* Engage professional advisors
 
 ### 6-12 Months Before Sale
 
-- Final structure optimization
-- Negotiate deal terms with tax in mind
-- Coordinate with legal and accounting teams
-- Plan for proceeds investment
+* Final structure optimization
+* Negotiate deal terms with tax in mind
+* Coordinate with legal and accounting teams
+* Plan for proceeds investment
 
 ### At Close
 
-- Execute planned structure
-- Manage cash flow for tax payments
-- Begin wealth management transition
+* Execute planned structure
+* Manage cash flow for tax payments
+* Begin wealth management transition
 
 ## The Cost of Waiting
 
@@ -189,14 +193,16 @@ The most expensive mistake in exit planning is waiting too long. Many strategies
 5. **Plan for the proceeds** - the sale is just the beginning
 6. **Work with specialists** - this is not a DIY situation
 
+&nbsp;
+
 ## Your Keep Rate on a Business Sale
 
 At WealthBridge, we help entrepreneurs understand their true Keep Rate on business sales. This means looking beyond the headline sale price to understand:
 
-- What you'll actually receive after taxes
-- How different structures change the outcome
-- What planning opportunities still exist
-- How to protect and grow the proceeds
+* What you'll actually receive after taxes
+* How different structures change the outcome
+* What planning opportunities still exist
+* How to protect and grow the proceeds
 
 The difference between good and poor planning on a $5 million business sale could easily exceed $500,000. On larger transactions, the stakes are even higher.
 
