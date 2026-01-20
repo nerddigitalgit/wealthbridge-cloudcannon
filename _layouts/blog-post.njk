@@ -9,7 +9,7 @@ layout: base.njk
         {% if category %}
         <span class="blog-post__category">{{ category }}</span>
         {% endif %}
-        <span class="blog-post__date">{{ date | date: "%B %d, %Y" }}</span>
+        <span class="blog-post__date">{{ date | date("%B %d, %Y") }}</span>
         {% if reading_time %}
         <span class="blog-post__reading-time">{{ reading_time }} min read</span>
         {% endif %}
