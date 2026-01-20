@@ -1,0 +1,79 @@
+---
+layout: base.njk
+title: Blog | WealthBridge Consulting
+description: Insights, strategies, and advice for Canadian business owners looking to build lasting wealth and keep more of what they earn.
+pagination:
+  data: collections.blog
+  size: 10
+  alias: posts
+  reverse: true
+---
+
+<section class="blog-listing section--cream">
+  <div class="container">
+    <header class="blog-listing__header">
+      <p class="eyebrow">Insights & Strategy</p>
+      <h1>The WealthBridge Blog</h1>
+      <p class="subtitle">Expert advice for Canadian business owners on tax strategy, wealth building, and keeping more of what you earn.</p>
+    </header>
+
+    <div class="blog-listing__grid">
+      {% for post in posts %}
+      <article class="blog-card">
+        {% if post.data.featured_image %}
+        <a href="{{ post.url }}" class="blog-card__image">
+          <img src="{{ post.data.featured_image }}" alt="{{ post.data.title }}">
+        </a>
+        {% endif %}
+        <div class="blog-card__content">
+          <div class="blog-card__meta">
+            {% if post.data.category %}
+            <span class="blog-card__category">{{ post.data.category }}</span>
+            {% endif %}
+            <span class="blog-card__date">{{ post.date | date: "%B %d, %Y" }}</span>
+          </div>
+          <h2 class="blog-card__title">
+            <a href="{{ post.url }}">{{ post.data.title }}</a>
+          </h2>
+          {% if post.data.excerpt %}
+          <p class="blog-card__excerpt">{{ post.data.excerpt }}</p>
+          {% endif %}
+          <a href="{{ post.url }}" class="blog-card__link">
+            Read More
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    {% if pagination.pages.length > 1 %}
+    <nav class="blog-pagination">
+      {% if pagination.href.previous %}
+      <a href="{{ pagination.href.previous }}" class="blog-pagination__link blog-pagination__link--prev">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Previous
+      </a>
+      {% endif %}
+      <span class="blog-pagination__current">Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</span>
+      {% if pagination.href.next %}
+      <a href="{{ pagination.href.next }}" class="blog-pagination__link blog-pagination__link--next">
+        Next
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      {% endif %}
+    </nav>
+    {% endif %}
+  </div>
+</section>
+
+<section class="cta section section--sage">
+  <div class="container">
+    <div class="cta__inner">
+      <p class="eyebrow">Take the First Step</p>
+      <h2 class="cta__title">Ready to Raise Your Keep Rate?</h2>
+      <p class="subtitle cta__subtitle">Book a free 30-minute audit and discover exactly where your wealth is quietly leaking.</p>
+      <a href="{{ site.calendly_url }}" class="btn btn--primary btn--large">Get Your Free Audit</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,74 @@
+---
+layout: base.njk
+---
+
+<article class="blog-post">
+  <header class="blog-post__header section--cream">
+    <div class="container">
+      <div class="blog-post__meta">
+        {% if category %}
+        <span class="blog-post__category">{{ category }}</span>
+        {% endif %}
+        <span class="blog-post__date">{{ date | date: "%B %d, %Y" }}</span>
+        {% if reading_time %}
+        <span class="blog-post__reading-time">{{ reading_time }} min read</span>
+        {% endif %}
+      </div>
+      <h1 class="blog-post__title">{{ title }}</h1>
+      {% if excerpt %}
+      <p class="blog-post__excerpt">{{ excerpt }}</p>
+      {% endif %}
+      {% if author %}
+      <div class="blog-post__author">
+        {% if author_image %}
+        <div class="blog-post__author-avatar">
+          <img src="{{ author_image }}" alt="{{ author }}">
+        </div>
+        {% endif %}
+        <div class="blog-post__author-info">
+          <span class="blog-post__author-name">{{ author }}</span>
+          {% if author_title %}
+          <span class="blog-post__author-title">{{ author_title }}</span>
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </header>
+
+  {% if featured_image %}
+  <div class="blog-post__featured-image">
+    <div class="container">
+      <img src="{{ featured_image }}" alt="{{ title }}">
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="blog-post__content section">
+    <div class="container">
+      <div class="blog-post__body">
+        {{ content | safe }}
+      </div>
+
+      {% if tags %}
+      <div class="blog-post__tags">
+        <span class="blog-post__tags-label">Tags:</span>
+        {% for tag in tags %}
+        <span class="blog-post__tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <aside class="blog-post__cta section section--sage">
+    <div class="container">
+      <div class="cta__inner">
+        <p class="eyebrow">Free Resource</p>
+        <h2 class="cta__title">Want to Keep More of What You Earn?</h2>
+        <p class="subtitle cta__subtitle">Book a free 30-minute Keep Rate Audit and discover exactly where your wealth is quietly leaking.</p>
+        <a href="{{ site.calendly_url }}" class="btn btn--primary btn--large">Get Your Free Audit</a>
+      </div>
+    </div>
+  </aside>
+</article>

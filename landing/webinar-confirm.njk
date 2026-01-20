@@ -1,0 +1,64 @@
+---
+layout: base.njk
+title: You're Registered! | WealthBridge Consulting
+description: You're registered for the free Keep Rate Masterclass webinar. Check your email for details.
+confirmation_icon_type: success
+confirmation_title: You're Registered!
+confirmation_text: Check your email for the webinar link and calendar invite. We'll also send you a reminder 30 minutes before we go live.
+webinar_date: January 25, 2026
+webinar_time: 2:00 PM EST
+steps_title: "While You Wait:"
+steps:
+  - text: Add the webinar to your calendar (link in your email)
+  - text: Prepare any questions you'd like answered during Q&A
+  - text: Share this webinar with a business owner friend who could benefit
+cta_title: Want to Get Ahead?
+cta_text: Take our free 5-day email course and learn the Keep Rate framework before the webinar.
+cta_button: Start the Free Course
+cta_url: /landing/free-course/
+---
+
+<section class="confirmation section--cream">
+  <div class="container">
+    <div class="confirmation__card">
+      <div class="confirmation__icon confirmation__icon--success">
+        <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      </div>
+      <h1 class="confirmation__title" data-editable="text" data-prop="confirmation_title">{{ confirmation_title }}</h1>
+      <p class="confirmation__text" data-editable="text" data-prop="confirmation_text">{{ confirmation_text }}</p>
+
+      <div class="confirmation__webinar-details">
+        <div class="confirmation__detail">
+          <span class="confirmation__detail-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </span>
+          <span data-editable="text" data-prop="webinar_date">{{ webinar_date }}</span>
+        </div>
+        <div class="confirmation__detail">
+          <span class="confirmation__detail-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </span>
+          <span data-editable="text" data-prop="webinar_time">{{ webinar_time }}</span>
+        </div>
+      </div>
+
+      <div class="confirmation__steps">
+        <h3 class="confirmation__steps-title" data-editable="text" data-prop="steps_title">{{ steps_title }}</h3>
+        <div class="confirmation__steps-list">
+          {% for step in steps %}
+          <div class="confirmation__step">
+            <span class="confirmation__step-number">{{ loop.index }}</span>
+            <span>{{ step.text }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="confirmation__bonus">
+        <h3 class="confirmation__bonus-title" data-editable="text" data-prop="cta_title">{{ cta_title }}</h3>
+        <p class="confirmation__bonus-text" data-editable="text" data-prop="cta_text">{{ cta_text }}</p>
+        <a href="{{ cta_url }}" class="btn btn--primary btn--large" data-editable="text" data-prop="cta_button">{{ cta_button }}</a>
+      </div>
+    </div>
+  </div>
+</section>
