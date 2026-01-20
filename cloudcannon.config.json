@@ -18,6 +18,11 @@
         "visual",
         "data"
       ],
+      "_inputs": {
+        "$.hero_eyebrow_color": {
+          "cascade": true
+        }
+      },
       "disable_add": false,
       "disable_add_folder": false,
       "disable_file_actions": false
@@ -39,21 +44,32 @@
     },
     "blog": {
       "path": "blog",
-      "url": "/blog/[slug]/",
-      "output": true,
-      "icon": "article",
       "name": "Blog Posts",
+      "icon": "article",
+      "url": "/blog/[slug]/",
+      "disable_url": false,
       "description": "Articles and insights for business owners",
-      "_enabled_editors": ["content", "visual", "data"],
+      "_enabled_editors": [
+        "content",
+        "visual",
+        "data"
+      ],
       "add_options": [
         {
           "name": "New Blog Post",
           "schema": "blog_post"
         }
       ],
+      "disable_add": false,
+      "disable_add_folder": false,
+      "disable_file_actions": false,
       "schemas": {
         "blog_post": {
           "path": "schemas/blog-post.md",
+          "reorder_inputs": true,
+          "hide_extra_inputs": false,
+          "remove_empty_inputs": false,
+          "remove_extra_inputs": true,
           "name": "Blog Post"
         }
       }
@@ -250,166 +266,312 @@
     },
     "hero_eyebrow_color": {
       "type": "select",
-      "label": "Eyebrow Color",
-      "comment": "Select from brand color palette",
-      "cascade": true,
       "options": {
         "allow_empty": true,
         "values": [
-          {"name": "Gold (Brand Accent)", "value": "gold"},
-          {"name": "White", "value": "white"},
-          {"name": "Navy (Dark)", "value": "navy"},
-          {"name": "Sage (Green)", "value": "sage"},
-          {"name": "Slate (Gray)", "value": "slate"},
-          {"name": "Cream", "value": "cream"},
-          {"name": "Brown", "value": "brown"}
-        ]
-      }
+          {
+            "name": "Gold (Brand Accent)",
+            "value": "gold"
+          },
+          {
+            "name": "White",
+            "value": "white"
+          },
+          {
+            "name": "Navy (Dark)",
+            "value": "navy"
+          },
+          {
+            "name": "Sage (Green)",
+            "value": "sage"
+          },
+          {
+            "name": "Slate (Gray)",
+            "value": "slate"
+          },
+          {
+            "name": "Cream",
+            "value": "cream"
+          },
+          {
+            "name": "Brown",
+            "value": "brown"
+          }
+        ],
+        "preview": {
+          "text": null,
+          "subtext": null,
+          "icon": null,
+          "icon_color": [
+            {
+              "text": null
+            }
+          ],
+          "icon_background_color": null,
+          "image": null,
+          "metadata": null,
+          "gallery": null
+        }
+      },
+      "label": "Eyebrow Color",
+      "comment": "Select from brand color palette",
+      "cascade": true
     },
     "hero_title_color": {
       "type": "select",
-      "label": "Title Color",
-      "comment": "Select from brand color palette",
-      "cascade": true,
       "options": {
         "allow_empty": true,
         "values": [
-          {"name": "Navy (Dark)", "value": "navy"},
-          {"name": "Gold (Brand Accent)", "value": "gold"},
-          {"name": "White", "value": "white"},
-          {"name": "Sage (Green)", "value": "sage"},
-          {"name": "Slate (Gray)", "value": "slate"}
+          {
+            "name": "Navy (Dark)",
+            "value": "navy"
+          },
+          {
+            "name": "Gold (Brand Accent)",
+            "value": "gold"
+          },
+          {
+            "name": "White",
+            "value": "white"
+          },
+          {
+            "name": "Sage (Green)",
+            "value": "sage"
+          },
+          {
+            "name": "Slate (Gray)",
+            "value": "slate"
+          }
         ]
-      }
+      },
+      "label": "Title Color",
+      "comment": "Select from brand color palette",
+      "cascade": true
     },
     "hero_title_highlight_color": {
       "type": "select",
-      "label": "Highlight Color",
-      "comment": "Color for emphasized words in title",
-      "cascade": true,
       "options": {
         "allow_empty": true,
         "values": [
-          {"name": "Gold (Brand Accent)", "value": "gold"},
-          {"name": "White", "value": "white"},
-          {"name": "Navy (Dark)", "value": "navy"},
-          {"name": "Sage (Green)", "value": "sage"}
+          {
+            "name": "Gold (Brand Accent)",
+            "value": "gold"
+          },
+          {
+            "name": "White",
+            "value": "white"
+          },
+          {
+            "name": "Navy (Dark)",
+            "value": "navy"
+          },
+          {
+            "name": "Sage (Green)",
+            "value": "sage"
+          }
         ]
-      }
+      },
+      "label": "Highlight Color",
+      "comment": "Color for emphasized words in title",
+      "cascade": true
     },
     "hero_subtitle_color": {
       "type": "select",
-      "label": "Subtitle Color",
-      "comment": "Select from brand color palette",
-      "cascade": true,
       "options": {
         "allow_empty": true,
         "values": [
-          {"name": "Slate (Gray)", "value": "slate"},
-          {"name": "Navy (Dark)", "value": "navy"},
-          {"name": "White", "value": "white"},
-          {"name": "Gold (Brand Accent)", "value": "gold"}
+          {
+            "name": "Slate (Gray)",
+            "value": "slate"
+          },
+          {
+            "name": "Navy (Dark)",
+            "value": "navy"
+          },
+          {
+            "name": "White",
+            "value": "white"
+          },
+          {
+            "name": "Gold (Brand Accent)",
+            "value": "gold"
+          }
         ]
-      }
+      },
+      "label": "Subtitle Color",
+      "comment": "Select from brand color palette",
+      "cascade": true
     },
     "problem_title_color": {
       "type": "select",
-      "label": "Title Color",
-      "cascade": true,
       "options": {
         "allow_empty": true,
         "values": [
-          {"name": "White", "value": "white"},
-          {"name": "Navy (Dark)", "value": "navy"},
-          {"name": "Gold (Brand Accent)", "value": "gold"}
+          {
+            "name": "White",
+            "value": "white"
+          },
+          {
+            "name": "Navy (Dark)",
+            "value": "navy"
+          },
+          {
+            "name": "Gold (Brand Accent)",
+            "value": "gold"
+          }
         ]
-      }
+      },
+      "label": "Title Color",
+      "cascade": true
     },
     "process_eyebrow_color": {
       "type": "select",
-      "label": "Eyebrow Color",
-      "cascade": true,
       "options": {
         "allow_empty": true,
         "values": [
-          {"name": "Gold (Brand Accent)", "value": "gold"},
-          {"name": "White", "value": "white"},
-          {"name": "Navy (Dark)", "value": "navy"}
+          {
+            "name": "Gold (Brand Accent)",
+            "value": "gold"
+          },
+          {
+            "name": "White",
+            "value": "white"
+          },
+          {
+            "name": "Navy (Dark)",
+            "value": "navy"
+          }
         ]
-      }
+      },
+      "label": "Eyebrow Color",
+      "cascade": true
     },
     "process_title_color": {
       "type": "select",
-      "label": "Title Color",
-      "cascade": true,
       "options": {
         "allow_empty": true,
         "values": [
-          {"name": "White", "value": "white"},
-          {"name": "Navy (Dark)", "value": "navy"},
-          {"name": "Gold (Brand Accent)", "value": "gold"}
+          {
+            "name": "White",
+            "value": "white"
+          },
+          {
+            "name": "Navy (Dark)",
+            "value": "navy"
+          },
+          {
+            "name": "Gold (Brand Accent)",
+            "value": "gold"
+          }
         ]
-      }
+      },
+      "label": "Title Color",
+      "cascade": true
     },
     "interested_title_color": {
       "type": "select",
-      "label": "Title Color",
-      "cascade": true,
       "options": {
         "allow_empty": true,
         "values": [
-          {"name": "Navy (Dark)", "value": "navy"},
-          {"name": "White", "value": "white"},
-          {"name": "Gold (Brand Accent)", "value": "gold"}
+          {
+            "name": "Navy (Dark)",
+            "value": "navy"
+          },
+          {
+            "name": "White",
+            "value": "white"
+          },
+          {
+            "name": "Gold (Brand Accent)",
+            "value": "gold"
+          }
         ]
-      }
+      },
+      "label": "Title Color",
+      "cascade": true
     },
     "cta_eyebrow_color": {
       "type": "select",
-      "label": "Eyebrow Color",
-      "cascade": true,
       "options": {
         "allow_empty": true,
         "values": [
-          {"name": "Gold (Brand Accent)", "value": "gold"},
-          {"name": "White", "value": "white"},
-          {"name": "Navy (Dark)", "value": "navy"}
+          {
+            "name": "Gold (Brand Accent)",
+            "value": "gold"
+          },
+          {
+            "name": "White",
+            "value": "white"
+          },
+          {
+            "name": "Navy (Dark)",
+            "value": "navy"
+          }
         ]
-      }
+      },
+      "label": "Eyebrow Color",
+      "cascade": true
     },
     "cta_title_color": {
       "type": "select",
-      "label": "Title Color",
-      "cascade": true,
       "options": {
         "allow_empty": true,
         "values": [
-          {"name": "Navy (Dark)", "value": "navy"},
-          {"name": "White", "value": "white"},
-          {"name": "Gold (Brand Accent)", "value": "gold"}
+          {
+            "name": "Navy (Dark)",
+            "value": "navy"
+          },
+          {
+            "name": "White",
+            "value": "white"
+          },
+          {
+            "name": "Gold (Brand Accent)",
+            "value": "gold"
+          }
         ]
-      }
+      },
+      "label": "Title Color",
+      "cascade": true
     },
     "section_background": {
       "type": "select",
-      "label": "Section Background",
-      "comment": "Choose the background color for this section",
-      "cascade": true,
       "options": {
         "allow_empty": true,
         "values": [
-          {"name": "Cream (Light)", "value": "cream"},
-          {"name": "White", "value": "white"},
-          {"name": "Navy (Dark)", "value": "navy"},
-          {"name": "Sage (Green)", "value": "sage"},
-          {"name": "Brown", "value": "brown"}
+          {
+            "name": "Cream (Light)",
+            "value": "cream"
+          },
+          {
+            "name": "White",
+            "value": "white"
+          },
+          {
+            "name": "Navy (Dark)",
+            "value": "navy"
+          },
+          {
+            "name": "Sage (Green)",
+            "value": "sage"
+          },
+          {
+            "name": "Brown",
+            "value": "brown"
+          }
         ]
-      }
+      },
+      "label": "Section Background",
+      "comment": "Choose the background color for this section",
+      "cascade": true
     },
     "show_results_carousel": {
       "type": "switch",
       "label": "Show Results Carousel",
       "comment": "Toggle the two-row client results carousel section on/off",
+      "cascade": true
+    },
+    "$.hero_eyebrow_color": {
       "cascade": true
     }
   },
