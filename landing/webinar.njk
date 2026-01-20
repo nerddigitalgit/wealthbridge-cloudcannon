@@ -161,7 +161,7 @@ cta_button: Reserve My Free Seat
       </div>
 
       <!-- Registration Form Card -->
-      <div class="form-card form-card--webinar animate animate-delay-2">
+      <div class="form-card form-card--webinar form-card--embed animate animate-delay-2">
         <div class="form-card__urgency">
           <span class="form-card__urgency-icon">
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" /><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg>
@@ -173,30 +173,26 @@ cta_button: Reserve My Free Seat
           <h2 class="form-card__title" data-editable="text" data-prop="form_title">{{ form_title }}</h2>
           <p class="form-card__subtitle" data-editable="text" data-prop="form_subtitle">{{ form_subtitle }}</p>
         </div>
-        <form id="webinar-form" action="{{ form_webhook_url }}" method="POST" data-redirect="{{ form_redirect_url }}">
-          <div class="form-group">
-            <label class="form-label" for="firstName">First Name</label>
-            <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Enter your first name" required />
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="email">Email Address</label>
-            <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email address" required />
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="businessType">Business Type</label>
-            <select id="businessType" name="businessType" class="form-input form-select" required>
-              <option value="" disabled selected>Select your business type</option>
-              <option value="incorporated">Incorporated Business Owner</option>
-              <option value="self-employed">Self-Employed Professional</option>
-              <option value="real-estate">Real Estate Professional</option>
-              <option value="medical">Medical Professional</option>
-              <option value="consultant">Consultant / Freelancer</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn--primary btn--large btn--full" data-editable="text" data-prop="form_button">{{ form_button }}</button>
-          <p class="form-note" data-editable="text" data-prop="form_note">{{ form_note }}</p>
-        </form>
+        <div class="form-embed">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/Y3wwRlfwncWdCHGaQ9ms"
+            style="width:100%;height:100%;border:none;border-radius:3px"
+            id="inline-Y3wwRlfwncWdCHGaQ9ms"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Webinar Registration"
+            data-height="677"
+            data-layout-iframe-id="inline-Y3wwRlfwncWdCHGaQ9ms"
+            data-form-id="Y3wwRlfwncWdCHGaQ9ms"
+            title="Webinar Registration Form"
+          ></iframe>
+        </div>
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
       </div>
     </div>
   </div>
