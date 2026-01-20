@@ -6,7 +6,7 @@ description: >-
   use to keep more of every dollar they earn.
 webinar_status: live
 webinar_status_text: FREE LIVE WEBINAR
-hero_badge:
+hero_badge: FREE LIVE WEBINAR
 hero_title: The Keep Rate Masterclass
 hero_subtitle: >-
   Join us live and discover how Canadian business owners are legally keeping
@@ -114,21 +114,20 @@ cta_subtitle: >-
 cta_button: Reserve My Free Seat
 ---
 <!-- Hero Section with Live Indicator -->
-<section class="hero hero--webinar section--navy" id="signup">
+<section class="hero hero--webinar section--cream" id="signup">
   <div class="container">
     <div class="hero__grid">
       <div class="hero__content">
-        <!-- Live Status Indicator -->
-        <div class="live-indicator animate">
-          <span class="live-indicator__dot"></span>
-          <span class="live-indicator__text" data-editable="text" data-prop="webinar_status_text">{{ webinar_status_text }}</span>
+        <!-- Live Badge with Pulsing Dot -->
+        <div class="hero__badge hero__badge--live animate">
+          <span class="hero__badge-dot"></span>
+          <span data-editable="text" data-prop="hero_badge">{{ hero_badge }}</span>
         </div>
 
-        <div class="hero__badge hero__badge--dark animate animate-delay-1" data-editable="text" data-prop="hero_badge">{{ hero_badge }}</div>
-        <h1 class="hero__title hero__title--light animate animate-delay-1" data-editable="text" data-prop="hero_title">{{ hero_title | replace("Masterclass", "<br><span>Masterclass</span>") | safe }}</h1>
-        <p class="hero__subtitle hero__subtitle--light animate animate-delay-2" data-editable="text" data-prop="hero_subtitle">{{ hero_subtitle }}</p>
+        <h1 class="hero__title animate animate-delay-1" data-editable="text" data-prop="hero_title">{{ hero_title | replace("Masterclass", "<span class='text-gold'>Masterclass</span>") | safe }}</h1>
+        <p class="hero__subtitle animate animate-delay-2" data-editable="text" data-prop="hero_subtitle">{{ hero_subtitle }}</p>
 
-        <div class="webinar-details animate animate-delay-3">
+        <div class="webinar-details webinar-details--light animate animate-delay-3">
           <div class="webinar-details__item">
             <span class="webinar-details__icon">
               <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
@@ -149,11 +148,11 @@ cta_button: Reserve My Free Seat
           </div>
         </div>
 
-        <div class="hero__benefits hero__benefits--light animate animate-delay-3">
+        <div class="hero__benefits animate animate-delay-3">
           {% for benefit in hero_benefits %}
           <div class="hero__benefit">
-            <span class="hero__benefit-icon hero__benefit-icon--dark">
-              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12" /></svg>
+            <span class="hero__benefit-icon">
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </span>
             <span>{{ benefit.text }}</span>
           </div>
@@ -182,6 +181,18 @@ cta_button: Reserve My Free Seat
           <div class="form-group">
             <label class="form-label" for="email">Email Address</label>
             <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email address" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="businessType">Business Type</label>
+            <select id="businessType" name="businessType" class="form-input form-select" required>
+              <option value="" disabled selected>Select your business type</option>
+              <option value="incorporated">Incorporated Business Owner</option>
+              <option value="self-employed">Self-Employed Professional</option>
+              <option value="real-estate">Real Estate Professional</option>
+              <option value="medical">Medical Professional</option>
+              <option value="consultant">Consultant / Freelancer</option>
+              <option value="other">Other</option>
+            </select>
           </div>
           <button type="submit" class="btn btn--primary btn--large btn--full" data-editable="text" data-prop="form_button">{{ form_button }}</button>
           <p class="form-note" data-editable="text" data-prop="form_note">{{ form_note }}</p>
