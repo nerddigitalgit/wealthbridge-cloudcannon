@@ -42,6 +42,37 @@
       "disable_add_folder": false,
       "disable_file_actions": false
     },
+    "lead_magnets": {
+      "path": "landing-pages",
+      "name": "Lead Magnet Pages",
+      "icon": "auto_awesome",
+      "url": "/lp/[slug]/",
+      "disable_url": false,
+      "description": "Lead magnet and opt-in landing pages with forms",
+      "_enabled_editors": [
+        "visual",
+        "data"
+      ],
+      "add_options": [
+        {
+          "name": "New Lead Magnet Page",
+          "schema": "landing_page"
+        }
+      ],
+      "schemas": {
+        "landing_page": {
+          "path": "schemas/landing-page.md",
+          "reorder_inputs": true,
+          "hide_extra_inputs": false,
+          "remove_empty_inputs": false,
+          "remove_extra_inputs": false,
+          "name": "Lead Magnet Page"
+        }
+      },
+      "disable_add": false,
+      "disable_add_folder": false,
+      "disable_file_actions": false
+    },
     "blog": {
       "path": "blog",
       "name": "Blog Posts",
@@ -211,6 +242,164 @@
     "embed_code": {
       "type": "code",
       "label": "Embed Code",
+      "cascade": true
+    },
+    "form_embed_code": {
+      "type": "code",
+      "label": "Form Embed Code",
+      "comment": "Paste your GoHighLevel or other form embed code here",
+      "cascade": true
+    },
+    "show_form": {
+      "type": "switch",
+      "label": "Show Form",
+      "comment": "Toggle the lead capture form on/off",
+      "cascade": true
+    },
+    "show_content_section": {
+      "type": "switch",
+      "label": "Show Content Section",
+      "cascade": true
+    },
+    "show_benefits_section": {
+      "type": "switch",
+      "label": "Show Benefits Section",
+      "cascade": true
+    },
+    "show_cta_section": {
+      "type": "switch",
+      "label": "Show CTA Section",
+      "cascade": true
+    },
+    "hero_badge": {
+      "type": "text",
+      "label": "Hero Badge",
+      "comment": "Small badge text above the title (e.g., FREE GUIDE)",
+      "cascade": true
+    },
+    "hero_background": {
+      "type": "select",
+      "label": "Hero Background",
+      "options": {
+        "allow_empty": false,
+        "values": [
+          { "name": "Cream", "value": "cream" },
+          { "name": "White", "value": "white" },
+          { "name": "Navy", "value": "navy" },
+          { "name": "Sage", "value": "sage" }
+        ]
+      },
+      "cascade": true
+    },
+    "benefits_background": {
+      "type": "select",
+      "label": "Benefits Background",
+      "options": {
+        "allow_empty": false,
+        "values": [
+          { "name": "White", "value": "white" },
+          { "name": "Cream", "value": "cream" },
+          { "name": "Navy", "value": "navy" },
+          { "name": "Sage", "value": "sage" }
+        ]
+      },
+      "cascade": true
+    },
+    "cta_background": {
+      "type": "select",
+      "label": "CTA Background",
+      "options": {
+        "allow_empty": false,
+        "values": [
+          { "name": "Sage", "value": "sage" },
+          { "name": "Navy", "value": "navy" },
+          { "name": "Cream", "value": "cream" },
+          { "name": "White", "value": "white" }
+        ]
+      },
+      "cascade": true
+    },
+    "content_background": {
+      "type": "select",
+      "label": "Content Background",
+      "options": {
+        "allow_empty": false,
+        "values": [
+          { "name": "White", "value": "white" },
+          { "name": "Cream", "value": "cream" }
+        ]
+      },
+      "cascade": true
+    },
+    "form_title": {
+      "type": "text",
+      "label": "Form Title",
+      "cascade": true
+    },
+    "form_subtitle": {
+      "type": "text",
+      "label": "Form Subtitle",
+      "cascade": true
+    },
+    "form_note": {
+      "type": "text",
+      "label": "Form Note",
+      "comment": "Small text below the form (e.g., privacy note)",
+      "cascade": true
+    },
+    "benefits_eyebrow": {
+      "type": "text",
+      "label": "Benefits Eyebrow",
+      "cascade": true
+    },
+    "benefits_title": {
+      "type": "text",
+      "label": "Benefits Title",
+      "cascade": true
+    },
+    "benefits_subtitle": {
+      "type": "textarea",
+      "label": "Benefits Subtitle",
+      "cascade": true
+    },
+    "cta_eyebrow": {
+      "type": "text",
+      "label": "CTA Eyebrow",
+      "cascade": true
+    },
+    "cta_title": {
+      "type": "text",
+      "label": "CTA Title",
+      "cascade": true
+    },
+    "cta_subtitle": {
+      "type": "textarea",
+      "label": "CTA Subtitle",
+      "cascade": true
+    },
+    "cta_button_text": {
+      "type": "text",
+      "label": "CTA Button Text",
+      "cascade": true
+    },
+    "cta_button_url": {
+      "type": "url",
+      "label": "CTA Button URL",
+      "cascade": true
+    },
+    "content_eyebrow": {
+      "type": "text",
+      "label": "Content Eyebrow",
+      "cascade": true
+    },
+    "content_title": {
+      "type": "text",
+      "label": "Content Title",
+      "cascade": true
+    },
+    "content_body": {
+      "type": "markdown",
+      "label": "Content Body",
       "cascade": true
     },
     "bio": {
@@ -599,6 +788,23 @@
         "value": {
           "text": "",
           "is_positive": false
+        }
+      }
+    },
+    "hero_benefits": {
+      "style": "select",
+      "values": {
+        "value": {
+          "text": ""
+        }
+      }
+    },
+    "benefits_items": {
+      "style": "select",
+      "values": {
+        "value": {
+          "title": "",
+          "text": ""
         }
       }
     }

@@ -1,0 +1,4 @@
+{
+  "layout": "landing-page.njk",
+  "permalink": "/lp/{{ page.fileSlug }}/"
+}
