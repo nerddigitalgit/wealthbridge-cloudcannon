@@ -59,6 +59,9 @@
           "schema": "landing_page"
         }
       ],
+      "disable_add": false,
+      "disable_add_folder": false,
+      "disable_file_actions": false,
       "schemas": {
         "landing_page": {
           "path": "schemas/landing-page.md",
@@ -66,12 +69,14 @@
           "hide_extra_inputs": false,
           "remove_empty_inputs": false,
           "remove_extra_inputs": false,
-          "name": "Lead Magnet Page"
+          "name": "Lead Magnet Page",
+          "_inputs": {
+            "$.layout": {
+              "cascade": true
+            }
+          }
         }
-      },
-      "disable_add": false,
-      "disable_add_folder": false,
-      "disable_file_actions": false
+      }
     },
     "blog": {
       "path": "blog",
@@ -279,56 +284,98 @@
     },
     "hero_background": {
       "type": "select",
-      "label": "Hero Background",
       "options": {
         "allow_empty": false,
         "values": [
-          { "name": "Cream", "value": "cream" },
-          { "name": "White", "value": "white" },
-          { "name": "Navy", "value": "navy" },
-          { "name": "Sage", "value": "sage" }
+          {
+            "name": "Cream",
+            "value": "cream"
+          },
+          {
+            "name": "White",
+            "value": "white"
+          },
+          {
+            "name": "Navy",
+            "value": "navy"
+          },
+          {
+            "name": "Sage",
+            "value": "sage"
+          }
         ]
       },
+      "label": "Hero Background",
       "cascade": true
     },
     "benefits_background": {
       "type": "select",
-      "label": "Benefits Background",
       "options": {
         "allow_empty": false,
         "values": [
-          { "name": "White", "value": "white" },
-          { "name": "Cream", "value": "cream" },
-          { "name": "Navy", "value": "navy" },
-          { "name": "Sage", "value": "sage" }
+          {
+            "name": "White",
+            "value": "white"
+          },
+          {
+            "name": "Cream",
+            "value": "cream"
+          },
+          {
+            "name": "Navy",
+            "value": "navy"
+          },
+          {
+            "name": "Sage",
+            "value": "sage"
+          }
         ]
       },
+      "label": "Benefits Background",
       "cascade": true
     },
     "cta_background": {
       "type": "select",
-      "label": "CTA Background",
       "options": {
         "allow_empty": false,
         "values": [
-          { "name": "Sage", "value": "sage" },
-          { "name": "Navy", "value": "navy" },
-          { "name": "Cream", "value": "cream" },
-          { "name": "White", "value": "white" }
+          {
+            "name": "Sage",
+            "value": "sage"
+          },
+          {
+            "name": "Navy",
+            "value": "navy"
+          },
+          {
+            "name": "Cream",
+            "value": "cream"
+          },
+          {
+            "name": "White",
+            "value": "white"
+          }
         ]
       },
+      "label": "CTA Background",
       "cascade": true
     },
     "content_background": {
       "type": "select",
-      "label": "Content Background",
       "options": {
         "allow_empty": false,
         "values": [
-          { "name": "White", "value": "white" },
-          { "name": "Cream", "value": "cream" }
+          {
+            "name": "White",
+            "value": "white"
+          },
+          {
+            "name": "Cream",
+            "value": "cream"
+          }
         ]
       },
+      "label": "Content Background",
       "cascade": true
     },
     "form_title": {
@@ -761,6 +808,9 @@
       "cascade": true
     },
     "$.hero_eyebrow_color": {
+      "cascade": true
+    },
+    "$.layout": {
       "cascade": true
     }
   },
