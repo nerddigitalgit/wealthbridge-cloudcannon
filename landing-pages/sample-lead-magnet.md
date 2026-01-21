@@ -29,7 +29,7 @@ content_background: white
 content_eyebrow:
 content_title:
 content_body:
-show_benefits_section: true
+show_benefits_section: false
 benefits_background: white
 benefits_eyebrow: What's Inside
 benefits_title: What You'll Learn
