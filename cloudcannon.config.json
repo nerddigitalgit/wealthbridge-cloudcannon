@@ -38,6 +38,11 @@
         "visual",
         "data"
       ],
+      "_inputs": {
+        "$.agenda_items[*].time": {
+          "cascade": true
+        }
+      },
       "disable_add": false,
       "disable_add_folder": false,
       "disable_file_actions": false
@@ -290,16 +295,28 @@
     },
     "hero_timezone": {
       "type": "select",
-      "label": "Timezone",
       "options": {
         "allow_empty": false,
         "values": [
-          { "name": "EST (Eastern)", "value": "EST" },
-          { "name": "CST (Central)", "value": "CST" },
-          { "name": "MST (Mountain)", "value": "MST" },
-          { "name": "PST (Pacific)", "value": "PST" }
+          {
+            "name": "EST (Eastern)",
+            "value": "EST"
+          },
+          {
+            "name": "CST (Central)",
+            "value": "CST"
+          },
+          {
+            "name": "MST (Mountain)",
+            "value": "MST"
+          },
+          {
+            "name": "PST (Pacific)",
+            "value": "PST"
+          }
         ]
       },
+      "label": "Timezone",
       "cascade": true
     },
     "hero_background": {
