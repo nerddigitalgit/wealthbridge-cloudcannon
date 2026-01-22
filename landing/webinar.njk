@@ -12,7 +12,8 @@ hero_subtitle: >-
   Join us live and discover how Canadian business owners are legally keeping
   85%+ of their income while everyone else loses half to taxes.
 hero_date: 2026-01-28T00:00:00-05:00
-hero_time: 2:00 PM EST
+hero_time: 2:00 PM
+hero_timezone: EST
 hero_duration: 60 minutes
 hero_spots_left: 23
 hero_benefits:
@@ -82,27 +83,26 @@ audience_cards:
       ahead fast enough.
   - title: Tax-Frustrated Professionals
     text: You're tired of watching half your income disappear to taxes every year.
-proof_eyebrow: What People Are Saying
-proof_title: From Previous Attendees
+proof_eyebrow: Client Results
+proof_title: Real results. Real people.
 proof_testimonials:
   - quote: >-
-      This webinar completely changed how I think about my finances. I had no
-      idea there were legal ways to keep so much more.
-    name: Michael Chen
-    role: IT Consultant, Toronto
-    avatar:
+      Nobody asked: "Why aren't you incorporated?" We did. $3.2M saved in taxes
+      over 15 years.
+    name: 12 Years in Practice
+    role: $600K Income
+    avatar: >-
+      https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face
   - quote: >-
-      I've attended dozens of financial webinars. This is the first one that
-      actually gave me actionable strategies I could implement immediately.
-    name: Sarah Williams
-    role: Real Estate Agent, Vancouver
+      Using tax efficient vehicles, she now pays $0 in taxes to build wealth.
+    name: Business Owner
+    role: $500K Revenue
     avatar: >-
       https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face
   - quote: >-
-      Within 3 months of attending, I restructured my corporation and saved $47K
-      in taxes. Best hour I've ever invested.
-    name: David Patel
-    role: Dentist, Calgary
+      Pension wasn't invested. We fixed that. $44M projected net worth.
+    name: Executive
+    role: $1M+ Income
     avatar: >-
       https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face
 cta_eyebrow: Don't Miss Out
@@ -137,7 +137,7 @@ cta_button: Reserve My Free Seat
             <span class="webinar-details__icon">
               <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
             </span>
-            <span data-editable="text" data-prop="hero_time">{{ hero_time }}</span>
+            <span>{{ hero_time }} {{ hero_timezone }}</span>
           </div>
           <div class="webinar-details__item">
             <span class="webinar-details__icon">

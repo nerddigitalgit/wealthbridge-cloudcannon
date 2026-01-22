@@ -282,6 +282,26 @@
       "comment": "Small badge text above the title (e.g., FREE GUIDE)",
       "cascade": true
     },
+    "hero_time": {
+      "type": "text",
+      "label": "Event Time",
+      "comment": "Use 12-hour format like 2:00 PM or 24-hour format like 14:00",
+      "cascade": true
+    },
+    "hero_timezone": {
+      "type": "select",
+      "label": "Timezone",
+      "options": {
+        "allow_empty": false,
+        "values": [
+          { "name": "EST (Eastern)", "value": "EST" },
+          { "name": "CST (Central)", "value": "CST" },
+          { "name": "MST (Mountain)", "value": "MST" },
+          { "name": "PST (Pacific)", "value": "PST" }
+        ]
+      },
+      "cascade": true
+    },
     "hero_background": {
       "type": "select",
       "options": {
