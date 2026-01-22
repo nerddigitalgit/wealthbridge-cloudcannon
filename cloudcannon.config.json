@@ -288,6 +288,12 @@
       "comment": "Use 12-hour format like 2:00 PM or 24-hour format like 14:00",
       "cascade": true
     },
+    "timestamp": {
+      "type": "text",
+      "label": "Timestamp",
+      "comment": "Time marker for agenda items (e.g., 0:00, 15:00)",
+      "cascade": true
+    },
     "hero_timezone": {
       "type": "select",
       "label": "Timezone",
