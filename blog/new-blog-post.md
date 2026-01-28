@@ -1,11 +1,10 @@
 ---
 _schema: blog_post
 title: New Blog Post
-date: 2026-01-20T00:00:00Z
+date: 2026-01-19T19:00:00-05:00
 author: Behi Shafiei
 author_title: Founder, WealthBridge Consulting
-author_image: >-
-  https://cdn.builder.io/api/v1/image/assets%2F44e3e188e75945c7957b904ccda3f1ae%2Fc1b2746894e54131b1ae91e0d6c8a0f0
+author_image: /uploads/conversion-codegraphic.png
 category: Wealth Strategy
 excerpt: A brief summary of what this article covers.
 featured_image:

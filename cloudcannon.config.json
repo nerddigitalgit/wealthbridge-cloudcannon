@@ -111,7 +111,13 @@
           "hide_extra_inputs": false,
           "remove_empty_inputs": false,
           "remove_extra_inputs": true,
-          "name": "Blog Post"
+          "name": "Blog Post",
+          "_inputs": {
+            "$.category": {
+              "type": "select",
+              "cascade": true
+            }
+          }
         }
       }
     },
