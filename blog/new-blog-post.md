@@ -33,7 +33,7 @@ Wrap up with key takeaways and a call to action.
 
 &nbsp;
 
-&nbsp;
+https://x.com/MattEpstein16/status/2016285038149611947?s=20
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/8db209cb71a144d797d4e1918a761adf" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe><p></p></div>
 
